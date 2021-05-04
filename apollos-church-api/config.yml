@@ -56,7 +56,6 @@ ONE_SIGNAL:
 CHURCH_ONLINE:
   URL: ${CHURCH_ONLINE_URL}
   MEDIA_URLS: []
-  WEB_VIEW_URL: https://apollos.online.church/
 SUGGESTED_FOLLOWS:
   - michael.neeley@differential.com
   -
