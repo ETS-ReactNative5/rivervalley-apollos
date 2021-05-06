@@ -13,11 +13,11 @@
 # Uncomment the line if you want fastlane to automatically update itself
 #update_fastlane
 
-#before_all do
-  #ensure_git_branch
-  #ensure_git_status_clean
-  #git_pull
-#end
+before_all do
+  ensure_git_branch
+  ensure_git_status_clean
+  git_pull
+end
 
 platform :ios do
 
