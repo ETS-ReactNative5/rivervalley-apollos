@@ -10,7 +10,11 @@
  * elements are colored, go there. The next level of control comes
  * on a per-component basis with "overrides"
  */
-// const colors = {};
+const colors = {
+  primary: '#000000',
+  secondary: '#8e8e93',
+  tertiary: '#8e8e93',
+};
 
 /* Base Typography sizing and fonts.
  * To control speicfic styles used on different type components (like H1, H2, etc), see "overrides"
@@ -56,4 +60,4 @@
 //   ...propOverrides,
 // };
 
-export default {};
+export default { colors };
