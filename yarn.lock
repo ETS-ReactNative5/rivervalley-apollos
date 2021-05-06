@@ -13879,6 +13879,11 @@ react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-native-amplitude-analytics@^0.2.12:
+  version "0.2.12"
+  resolved "https://registry.yarnpkg.com/react-native-amplitude-analytics/-/react-native-amplitude-analytics-0.2.12.tgz#bf9b4fdd2d7ba6058964ead3c0d3b9eecc1a22b5"
+  integrity sha512-5pL048n7j0LeCPOjdDgADsijxdgoy1FBFZj75U9KjW+pP6TBTpROnVzgZuo4/Xd5f+xiB+Vz7gn8SCEAHv8IJg==
+
 react-native-config@^0.11.7:
   version "0.11.7"
   resolved "https://registry.yarnpkg.com/react-native-config/-/react-native-config-0.11.7.tgz#a2b323f2ecd76a4df88cbb6bc86eaa2ef9febee7"
