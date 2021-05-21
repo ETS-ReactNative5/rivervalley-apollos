@@ -100,9 +100,26 @@ TABS:
     - algorithms:
       - type: CONTENT_FEED
         arguments:
+          limit: 1
           channelIds:
             - 32
-      type: VerticalCardList            
+            - 5
+      type: VerticalCardList    
+      isFeatured: true
+    - algorithms:
+      - type: CONTENT_FEED
+        arguments:
+          channelIds:
+            - 5
+      type: HorizontalCardList
+      subtitle: Messages
+    - algorithms:
+      - type: CONTENT_FEED
+        arguments:
+          channelIds:
+            - 32
+      type: HorizontalCardList
+      subtitle: Daily Soap
 
   WATCH:
     - algorithms:
@@ -110,7 +127,7 @@ TABS:
         arguments:
           channelIds:
             - 5
-      type: VerticalCardList                        
+      type: VerticalCardList
 
   PRAY:
     - algorithms: [DAILY_PRAYER]
