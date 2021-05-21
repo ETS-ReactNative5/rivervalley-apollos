@@ -376,10 +376,10 @@
     entities "^1.1.2"
     htmlparser2 "3.9.2"
 
-"@apollosproject/ui-kit@^2.16.0":
-  version "2.16.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-kit/-/ui-kit-2.16.0.tgz#c34bb8a47a9e6ff5f3300bce3a4042bb7f123ec9"
-  integrity sha512-fzp3/IDGEaPoo7p1IrzKjUmbePPaNorofVT0ILWS9DGLVdSL5KK0/0dJaYYhRnbe6Z+PapwMwULBG5by3EG7wQ==
+"@apollosproject/ui-kit@2.16.1-canary.2":
+  version "2.16.1-canary.2"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-kit/-/ui-kit-2.16.1-canary.2.tgz#00862341ecd05ce9afb1ea6e03650cce3eef2619"
+  integrity sha512-0qb24VJ+KfOLIWp1GtjNYu0N8f9Gnda6p1R91fUV8TiISo/8OE5syf8PKiOg3tffFOPJIfWAz5ft5UBa3H1oww==
   dependencies:
     "@react-native-community/blur" "^3.6.0"
     color "^3.1.0"

@@ -17,7 +17,7 @@ APP:
   JOBS_PASSWORD: ${JOBS_PASSWORD}
 ROCK:
   URL: ${ROCK_URL}
-  API_URL: ${ROCK_API}
+  API_TOKEN: ${ROCK_TOKEN}
 UNIVERSAL_LINKS:
   APPLE_APP_ID: ${APPLE_APP_ID}
   APPLE_TEAM_ID: ${APPLE_TEAM_ID}
@@ -94,6 +94,7 @@ TABS:
         arguments:
           channelIds:
             - 31
+      type: VerticalCardList
 
   READ:
     - algorithms:
@@ -101,6 +102,7 @@ TABS:
         arguments:
           channelIds:
             - 32
+      type: VerticalCardList            
 
   WATCH:
     - algorithms:
@@ -108,6 +110,7 @@ TABS:
         arguments:
           channelIds:
             - 5
+      type: VerticalCardList                        
 
   PRAY:
     - algorithms: [DAILY_PRAYER]
