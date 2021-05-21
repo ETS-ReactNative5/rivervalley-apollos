@@ -73,17 +73,17 @@ const TabNavigator = () => {
       <Screen
         name="Home"
         component={HomeTab}
-        options={{ tabBarIcon: tabBarIcon('home') }}
+        options={{ tabBarIcon: tabBarIcon('house') }}
       />
       <Screen
         name="Read"
         component={ReadTab}
-        options={{ tabBarIcon: tabBarIcon('sections') }}
+        options={{ tabBarIcon: tabBarIcon('read') }}
       />
       <Screen
         name="Watch"
         component={WatchTab}
-        options={{ tabBarIcon: tabBarIcon('video') }}
+        options={{ tabBarIcon: tabBarIcon('watch') }}
       />
       <Screen
         name="Pray"
@@ -93,7 +93,7 @@ const TabNavigator = () => {
       <Screen
         name="Connect"
         component={Connect}
-        options={{ tabBarIcon: tabBarIcon('profile') }}
+        options={{ tabBarIcon: tabBarIcon('connect') }}
       />
     </Navigator>
   );
