@@ -122,9 +122,17 @@ TABS:
     - algorithms:
       - type: CONTENT_FEED
         arguments:
-          limit: 1
           channelIds:
             - 32
+      type: VerticalCardList
+
+  WATCH:
+    - algorithms:
+      - type: CONTENT_FEED
+        arguments:
+          limit: 1
+          channelIds:
+            - 34
             - 5
       type: VerticalCardList
       isFeatured: true
@@ -132,24 +140,16 @@ TABS:
       - type: CONTENT_FEED
         arguments:
           channelIds:
-            - 5
+            - 4
       type: HorizontalCardList
-      subtitle: Messages
+      subtitle: Message Series
     - algorithms:
       - type: CONTENT_FEED
         arguments:
           channelIds:
-            - 32
+            - 33
       type: HorizontalCardList
-      subtitle: Daily Soap
-
-  WATCH:
-    - algorithms:
-      - type: CONTENT_FEED
-        arguments:
-          channelIds:
-            - 5
-      type: VerticalCardList
+      subtitle: DiscipleU Series
 
   PRAY:
     - algorithms: [DAILY_PRAYER]
