@@ -115,7 +115,7 @@ TABS:
         arguments:
           channelIds:
             - 31
-          after: 1
+          skip: 1
       type: VerticalCardList
 
   READ:
