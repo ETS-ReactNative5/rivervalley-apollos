@@ -25,7 +25,10 @@ const AppProviders = (props) => (
       // TODO deprecated prop
       navigate={NavigationService.navigate}
       handleExternalLink={(url) => {
-        const path = url.split('app-link/')[1];
+        const path = url.includes('app-link/')
+          ? url.split('app-link/')[1]
+          : url.split('//')[1];
+
         const [route, location] = path.split('/');
         if (route === 'content')
           NavigationService.navigate('ContentSingle', { itemId: location });
