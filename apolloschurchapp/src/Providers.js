@@ -1,3 +1,4 @@
+import querystring from 'querystring';
 import React from 'react';
 import ApollosConfig from '@apollosproject/config';
 import { Providers, NavigationService } from '@apollosproject/ui-kit';
@@ -28,11 +29,15 @@ const AppProviders = (props) => (
         const [route, location] = path.split('/');
         if (route === 'content')
           NavigationService.navigate('ContentSingle', { itemId: location });
-        if (route === 'nav')
+        if (route === 'nav') {
+          const [cleanPath, query] = location.split('?');
+          const args = querystring.parse(query);
           NavigationService.navigate(
             // turns "home" into "Home"
-            location[0].toUpperCase() + location.substring(1)
+            cleanPath[0].toUpperCase() + cleanPath.substring(1),
+            args
           );
+        }
       }}
       actionMap={{
         // accept a follow request when someone taps "accept" in a follow request push notification

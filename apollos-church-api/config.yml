@@ -98,6 +98,24 @@ TABS:
         arguments:
           channelIds:
             - 31
+          limit: 1
+      type: VerticalCardList
+    - algorithms:
+      - type: CONTENT_FEED
+        arguments:
+          channelIds:
+            - 32
+          limit: 1
+      - type: GO_PRAY
+      type: ActionList
+      title: TODAY
+      subtitle: DAILY GROWTH
+    - algorithms:
+      - type: CONTENT_FEED
+        arguments:
+          channelIds:
+            - 31
+          after: 1
       type: VerticalCardList
 
   READ:
@@ -108,7 +126,7 @@ TABS:
           channelIds:
             - 32
             - 5
-      type: VerticalCardList    
+      type: VerticalCardList
       isFeatured: true
     - algorithms:
       - type: CONTENT_FEED
