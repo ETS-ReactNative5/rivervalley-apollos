@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { styled, NavigationService } from '@apollosproject/ui-kit';
+import { NavigationService, withTheme } from '@apollosproject/ui-kit';
 import { useApolloClient } from '@apollo/client';
 
 import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
@@ -12,12 +12,19 @@ import { createFeatureFeedTab } from './Tab';
 import Connect from './connect';
 import tabBarIcon from './tabBarIcon';
 
-const HeaderLogo = styled(({ theme }) => ({
-  height: theme.sizing.baseUnit,
-  resizeMode: 'contain',
+const HeaderLogo = withTheme(({ theme }) => ({
+  style: {
+    height: theme.sizing.baseUnit * 2.5,
+    resizeMode: 'contain',
+  },
+  source:
+    theme.type === 'light'
+      ? require('./wordmark.png')
+      : require('./wordmark.dark.png'),
 }))(Image);
 
-const HeaderCenter = () => <HeaderLogo source={require('./wordmark.png')} />;
+const HeaderCenter = () => <HeaderLogo />;
+
 const HeaderRight = () => {
   const navigation = useNavigation();
   return <SearchButton onPress={() => navigation.navigate('Search')} />;

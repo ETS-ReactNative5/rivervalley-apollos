@@ -12,7 +12,7 @@
  */
 const colors = {
   primary: '#000000',
-  secondary: '#000000',
+  secondary: '#8e8e93',
   tertiary: '#8e8e93',
 };
 
