@@ -62,7 +62,8 @@ const AppProviders = (props) => (
         >
           <LiveProvider>
             <Providers
-              themeInput={customTheme}
+              // TODO fix dark mode, lots of black on black
+              themeInput={{ ...customTheme, type: 'light' }}
               iconInput={customIcons}
               {...props}
             />
