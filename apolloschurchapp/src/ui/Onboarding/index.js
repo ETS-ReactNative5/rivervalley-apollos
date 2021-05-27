@@ -25,7 +25,7 @@ const FullscreenBackgroundView = styled({
 })(BackgroundView);
 
 const ImageContainer = styled({
-  height: '40%',
+  height: '30%',
 })(View);
 
 const StyledImage = styled({
@@ -68,7 +68,7 @@ function Onboarding({ navigation, route }) {
                   onPressPrimary={swipeForward}
                   BackgroundComponent={
                     <ImageContainer>
-                      <StyledImage source={require('./img/personalize.jpg')} />
+                      {/* <StyledImage source={require('./img/personalize.jpg')} /> */}
                     </ImageContainer>
                   }
                 />
@@ -79,7 +79,7 @@ function Onboarding({ navigation, route }) {
                   }}
                   BackgroundComponent={
                     <ImageContainer>
-                      <StyledImage source={require('./img/locations.jpg')} />
+                      {/* <StyledImage source={require('./img/locations.jpg')} /> */}
                     </ImageContainer>
                   }
                 />
@@ -89,7 +89,7 @@ function Onboarding({ navigation, route }) {
                   BackgroundComponent={
                     <ImageContainer>
                       <StyledImage
-                        source={require('./img/notifications.jpg')}
+                      // source={require('./img/notifications.jpg')}
                       />
                     </ImageContainer>
                   }
@@ -100,7 +100,7 @@ function Onboarding({ navigation, route }) {
                   version={2}
                   BackgroundComponent={
                     <ImageContainer>
-                      <StyledImage source={require('./img/follow.jpg')} />
+                      {/* <StyledImage source={require('./img/follow.jpg')} /> */}
                     </ImageContainer>
                   }
                 />
