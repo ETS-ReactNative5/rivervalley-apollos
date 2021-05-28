@@ -34,13 +34,22 @@ const ActionTable = () => {
         <View>
           <RowHeader>
             <Name>
-              <H4>{'Connect with Apollos'}</H4>
+              <H4>{'Connect with River Valley'}</H4>
             </Name>
           </RowHeader>
           <TableView>
             <Touchable
+              onPress={() => openUrl('https://www.rivervalley.org/give/')}
+            >
+              <Cell>
+                <CellText>Donate</CellText>
+                <CellIcon name="arrow-next" />
+              </Cell>
+            </Touchable>
+            <Divider />
+            <Touchable
               onPress={() =>
-                openUrl('https://apollosrock.newspring.cc/page/235')
+                openUrl('https://www.rivervalley.org/next-steps/serve/')
               }
             >
               <Cell>
@@ -51,33 +60,11 @@ const ActionTable = () => {
             <Divider />
             <Touchable
               onPress={() =>
-                openUrl('https://apollosrock.newspring.cc/page/236')
+                openUrl('https://www.rivervalley.org/smallgroups/')
               }
             >
               <Cell>
                 <CellText>Join a small group</CellText>
-                <CellIcon name="arrow-next" />
-              </Cell>
-            </Touchable>
-            <Divider />
-            <Touchable
-              onPress={() =>
-                openUrl('https://apollosrock.newspring.cc/page/233')
-              }
-            >
-              <Cell>
-                <CellText>I need prayer</CellText>
-                <CellIcon name="arrow-next" />
-              </Cell>
-            </Touchable>
-          </TableView>
-          <TableView>
-            <Touchable
-              onPress={() => navigation.navigate('TestingControlPanel')}
-            >
-              <Cell>
-                <CellIcon name="settings" />
-                <CellText>Open Testing Panel</CellText>
                 <CellIcon name="arrow-next" />
               </Cell>
             </Touchable>

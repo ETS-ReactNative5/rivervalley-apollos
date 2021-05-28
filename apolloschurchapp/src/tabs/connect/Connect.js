@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { ConnectScreenConnected } from '@apollosproject/ui-connected';
 
 import ActionTable from './ActionTable';
-import ActionBar from './ActionBar';
+// import ActionBar from './ActionBar';
 
 class Connect extends PureComponent {
   static propTypes = {
@@ -14,9 +14,7 @@ class Connect extends PureComponent {
   };
 
   render() {
-    return (
-      <ConnectScreenConnected ActionTable={ActionTable} ActionBar={ActionBar} />
-    );
+    return <ConnectScreenConnected ActionTable={ActionTable} />;
   }
 }
 
