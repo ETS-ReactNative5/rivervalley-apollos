@@ -55,7 +55,7 @@ const ThemedNavigationContainer = withTheme(({ theme, ...props }) => ({
     dark: theme.type === 'dark',
     colors: {
       ...(theme.type === 'dark' ? DarkTheme.colors : DefaultTheme.colors),
-      primary: theme.colors.secondary,
+      primary: theme.colors.primary,
       background: theme.colors.background.screen,
       card: theme.colors.background.paper,
       text: theme.colors.text.primary,
