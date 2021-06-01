@@ -125,7 +125,9 @@ TABS:
           channelIds:
             - 32
       type: VerticalCardList
-
+    - type: CommentListFeature
+      nodeId: currentUser
+      nodeType: Person
   WATCH:
     - algorithms:
       - type: CONTENT_FEED
@@ -157,4 +159,4 @@ TABS:
       type: PrayerList
       title: Daily Prayer
     - type: VerticalPrayerList
-      title: Your Prayers
+      title: Your Prayers 
