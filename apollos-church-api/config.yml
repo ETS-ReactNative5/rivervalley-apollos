@@ -33,6 +33,12 @@ ONE_SIGNAL:
 CHURCH_ONLINE:
   URL: ${CHURCH_ONLINE_URL}
   WEB_VIEW_URL: https://apollos.online.church/
+SUGGESTED_FOLLOWS:
+  - kirk.graham@rivervalley.org
+  - clynt.reddy@rivervalley.org
+  - terry.parkman@rivervalley.org
+  - rachel.parsons@rivervalley.org
+  - gabi.orourke@rivervalley.org
 ALGOLIA:
   APPLICATION_ID: ${ALGOLIASEARCH_APPLICATION_ID}
   API_KEY: ${ALGOLIASEARCH_API_KEY}
@@ -160,4 +166,4 @@ TABS:
       type: PrayerList
       title: Daily Prayer
     - type: VerticalPrayerList
-      title: Your Prayers 
+      title: Your Prayers

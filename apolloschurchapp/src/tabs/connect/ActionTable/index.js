@@ -1,6 +1,5 @@
 import React from 'react';
 import { View } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 
 import {
   TableView,
@@ -26,54 +25,59 @@ const Name = styled({
   flexGrow: 1,
 })(View);
 
-const ActionTable = () => {
-  const navigation = useNavigation();
-  return (
-    <RockAuthedWebBrowser>
-      {(openUrl) => (
-        <View>
-          <RowHeader>
-            <Name>
-              <H4>{'Connect with River Valley'}</H4>
-            </Name>
-          </RowHeader>
-          <TableView>
-            <Touchable
-              onPress={() => openUrl('https://www.rivervalley.org/give/')}
-            >
-              <Cell>
-                <CellText>Donate</CellText>
-                <CellIcon name="arrow-next" />
-              </Cell>
-            </Touchable>
-            <Divider />
-            <Touchable
-              onPress={() =>
-                openUrl('https://www.rivervalley.org/next-steps/serve/')
-              }
-            >
-              <Cell>
-                <CellText>Find a serving opportunity</CellText>
-                <CellIcon name="arrow-next" />
-              </Cell>
-            </Touchable>
-            <Divider />
-            <Touchable
-              onPress={() =>
-                openUrl('https://www.rivervalley.org/smallgroups/')
-              }
-            >
-              <Cell>
-                <CellText>Join a small group</CellText>
-                <CellIcon name="arrow-next" />
-              </Cell>
-            </Touchable>
-          </TableView>
-        </View>
-      )}
-    </RockAuthedWebBrowser>
-  );
-};
+const ActionTable = () => (
+  <RockAuthedWebBrowser>
+    {(openUrl) => (
+      <View>
+        <RowHeader>
+          <Name>
+            <H4>{'Connect with River Valley'}</H4>
+          </Name>
+        </RowHeader>
+        <TableView>
+          <Touchable
+            onPress={() => openUrl('https://www.rivervalley.org/next/')}
+          >
+            <Cell>
+              <CellText>Sign up for Next class</CellText>
+              <CellIcon name="arrow-next" />
+            </Cell>
+          </Touchable>
+          <Divider />
+          <Touchable
+            onPress={() =>
+              openUrl('https://www.rivervalley.org/next-steps/serve/')
+            }
+          >
+            <Cell>
+              <CellText>Find a serving opportunity</CellText>
+              <CellIcon name="arrow-next" />
+            </Cell>
+          </Touchable>
+          <Divider />
+          <Touchable
+            onPress={() => openUrl('https://www.rivervalley.org/smallgroups/')}
+          >
+            <Cell>
+              <CellText>Join a small group</CellText>
+              <CellIcon name="arrow-next" />
+            </Cell>
+          </Touchable>
+          <Touchable
+            onPress={() =>
+              openUrl('https://www.rivervalley.org/next-steps/water-baptism/')
+            }
+          >
+            <Cell>
+              <CellText>Get water baptized</CellText>
+              <CellIcon name="arrow-next" />
+            </Cell>
+          </Touchable>
+        </TableView>
+      </View>
+    )}
+  </RockAuthedWebBrowser>
+);
 
 const StyledActionTable = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit * 100,
