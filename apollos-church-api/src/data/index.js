@@ -27,9 +27,9 @@ import {
   AuthSms,
   Campus,
   Group,
-  Feature,
+  // Feature,
   FeatureFeed,
-  ActionAlgorithm,
+  // ActionAlgorithm,
   Event,
   PrayerRequest,
   Persona,
@@ -40,7 +40,8 @@ import {
 import * as Theme from './theme';
 
 import * as HopeStream from './HopeStream';
-
+import * as ActionAlgorithm from './ActionAlgorithms';
+import * as Feature from './Feature';
 // This module is used to attach Rock User updating to the OneSignal module.
 // This module includes a Resolver that overides a resolver defined in `OneSignal`
 import * as OneSignalWithRock from './oneSignalWithRock';

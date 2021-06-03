@@ -269,10 +269,10 @@
     apollo-datasource "^0.2.0"
     ioredis "4.14.1"
 
-"@apollosproject/data-connector-rock@^2.16.0":
-  version "2.16.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-rock/-/data-connector-rock-2.16.0.tgz#235a1e45903ed69d9cfcd6c7279f17f06d16682d"
-  integrity sha512-kLv0AFvicTcn4VPzi4F6hBFooEs7vzGybQ8+1PliPIdxMqF9/bWQB7m76j8Nf8rsf2cPeFFiD0KtQzJ83ANIUg==
+"@apollosproject/data-connector-rock@2.17.1-canary.2":
+  version "2.17.1-canary.2"
+  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-rock/-/data-connector-rock-2.17.1-canary.2.tgz#af792a7f875e8966f1e4d092fabd5a70bd834f7e"
+  integrity sha512-EEI9Mz38vKuSbSv5quK3DaOOcsNDNyPYkYuJxI+mNEN5gaPqCZtnxKWtKHLcGKAhVR85+3fKwFI0wqC5Q1JjAw==
   dependencies:
     awesome-phonenumber "^2.4.2"
     form-data "^2.3.3"

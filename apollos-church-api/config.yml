@@ -68,7 +68,7 @@ ROCK_MAPPINGS:
       ContentChannelTypeId: [6]
     DevotionalContentItem:
       EntityType: ContentChannelItem
-      ContentChannelId: [7]
+      ContentChannelId: [32]
     MediaContentItem:
       EntityType: ContentChannelItem
     UniversalContentItem:
@@ -99,6 +99,24 @@ TABS:
         arguments:
           channelIds:
             - 31
+          limit: 1
+      type: VerticalCardList
+    - algorithms:
+      - type: CONTENT_FEED
+        arguments:
+          channelIds:
+            - 32
+          limit: 1
+      - type: GO_PRAY
+      type: ActionList
+      title: TODAY
+      subtitle: DAILY GROWTH
+    - algorithms:
+      - type: CONTENT_FEED
+        arguments:
+          channelIds:
+            - 31
+          skip: 1
       type: VerticalCardList
 
   READ:
@@ -108,7 +126,9 @@ TABS:
           channelIds:
             - 32
       type: VerticalCardList
-
+    - type: CommentListFeature
+      nodeId: currentUser
+      nodeType: Person
   WATCH:
     - algorithms:
       - type: CONTENT_FEED
@@ -140,4 +160,4 @@ TABS:
       type: PrayerList
       title: Daily Prayer
     - type: VerticalPrayerList
-      title: Your Prayers
+      title: Your Prayers 
