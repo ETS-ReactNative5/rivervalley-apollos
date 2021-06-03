@@ -34,7 +34,7 @@ const ActionTable = () => {
         <View>
           <RowHeader>
             <Name>
-              <H4>{'Connect with Apollos'}</H4>
+              <H4>{'Connect with River Valley'}</H4>
             </Name>
           </RowHeader>
           <TableView>
