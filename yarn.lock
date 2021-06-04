@@ -172,10 +172,10 @@
     "@babel/preset-env" "7.4.2"
     babel-plugin-module-resolver "^3.1.1"
 
-"@apollosproject/bugsnag@^2.13.1":
-  version "2.13.1"
-  resolved "https://registry.yarnpkg.com/@apollosproject/bugsnag/-/bugsnag-2.13.1.tgz#7a1a1fafa60ec1a4db435fead00ca10810ca105e"
-  integrity sha512-VWva/GqHNNze6TO+IQ3rEL3TlR9DAUjRmWF8gGv0e3h4ZY17EVbLG6rUxvHEqm/MnDt2Nw3hvBj/9ZSRMsl5Dw==
+"@apollosproject/bugsnag@^2.18.1":
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/@apollosproject/bugsnag/-/bugsnag-2.18.1.tgz#984833f07fe08ee97e6de1b4bd4b1fb0e8b4facb"
+  integrity sha512-9gzz9M/6pmVqPTrz7QJe49NKclGdgTVtuBJl1Fs274I7v+1poX5lQ04AvwRDIYS0TJM8Mlza09AvsOiveGT7hw==
   dependencies:
     "@bugsnag/js" "7.2.1"
 

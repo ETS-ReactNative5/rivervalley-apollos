@@ -5,6 +5,7 @@ import { RockLoggingExtension } from '@apollosproject/rock-apollo-data-source';
 import { get } from 'lodash';
 import { setupUniversalLinks } from '@apollosproject/server-core';
 import { createMigrationRunner } from '@apollosproject/data-connector-postgres';
+import { BugsnagPlugin } from '@apollosproject/bugsnag';
 
 let dataObj;
 
@@ -49,6 +50,7 @@ const apolloServer = new ApolloServer({
   resolvers,
   dataSources,
   context,
+  plugins: [new BugsnagPlugin()],
   introspection: true,
   extensions,
   formatError: (error) => {
