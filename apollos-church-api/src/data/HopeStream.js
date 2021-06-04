@@ -45,9 +45,9 @@ const baseResolver = {
   videos: async (root, args, { dataSources: { HopeStream } }) => {
     const videoUrls = [
       root?.attributeValues?.videoUrl?.value,
+      root?.attributeValues?.hopestreamVideoId?.value,
       root?.attributeValues?.hopestreamVideoID?.value,
     ].filter((v) => !!v);
-    // console.log(videoUrls);
     return videoUrls.map((videoUrl) => ({
       sources: [
         {

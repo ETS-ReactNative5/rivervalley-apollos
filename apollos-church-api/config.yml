@@ -78,6 +78,7 @@ ROCK_MAPPINGS:
       EntityType: ContentChannelItem
       ContentChannelId: [32]
     MediaContentItem:
+      ContentChannelId: [36]
       EntityType: ContentChannelItem
     UniversalContentItem:
       EntityType: ContentChannelItem
