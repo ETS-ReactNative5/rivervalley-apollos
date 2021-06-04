@@ -36,8 +36,10 @@ CHURCH_ONLINE:
 SUGGESTED_FOLLOWS:
   - kirk.graham@rivervalley.org
   - clynt.reddy@rivervalley.org
-  - terry.parkman@rivervalley.org
-  - rachel.parsons@rivervalley.org
+  -
+    id: ce3958ae-4ffa-43a2-b71e-87ec0e68107d #Terry Parkman
+  -
+    id: 01ec6531-41fd-4fdf-b5c8-ad4acd870937 # Rachel Parsons
   - gabi.orourke@rivervalley.org
 ALGOLIA:
   APPLICATION_ID: ${ALGOLIASEARCH_APPLICATION_ID}
