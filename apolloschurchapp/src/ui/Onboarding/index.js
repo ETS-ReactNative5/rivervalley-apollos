@@ -25,7 +25,7 @@ const FullscreenBackgroundView = styled({
 })(BackgroundView);
 
 const ImageContainer = styled({
-  height: '30%',
+  height: '10%',
 })(View);
 
 const StyledImage = styled({
