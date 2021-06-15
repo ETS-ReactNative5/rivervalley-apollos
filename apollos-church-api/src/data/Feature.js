@@ -28,7 +28,6 @@ class dataSource extends Feature.dataSource {
           case 'VerticalPrayerList':
             return this.createVerticalPrayerListFeature(finalConfig);
           case 'CommentListFeature':
-            console.log(finalConfig);
             return this.createCommentListFeature(finalConfig);
           case 'ActionList':
           default:
