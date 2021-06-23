@@ -134,10 +134,15 @@ TABS:
         arguments:
           channelIds:
             - 32
+          limit: 1
       type: VerticalCardList
-    - type: CommentListFeature
-      nodeId: currentUser
-      nodeType: Person
+    - type: HorizontalCardList
+      algorithms:
+        - type: CONTENT_FEED
+          arguments:
+            channelIds:
+              - 32
+
   WATCH:
     - algorithms:
       - type: CONTENT_FEED
