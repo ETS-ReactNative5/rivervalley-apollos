@@ -7,13 +7,24 @@ const Toolbar = () => (
     {(openUrl) => (
       <ActionBar>
         <ActionBarItem
-          onPress={() => openUrl('https://www.rivervalley.org/locations/')}
-          icon="locate"
-          label="Find a location"
+          onPress={() => openUrl('https://www.rivervalley.org/smallgroups/')}
+          icon="groups"
+          label="Small Groups"
         />
         <ActionBarItem
-          onPress={() => openUrl('https://www.rivervalley.org/give/')}
-          icon="download"
+          onPress={() =>
+            openUrl('https://www.rivervalley.org/next-steps/serve/')
+          }
+          icon="like"
+          label="Serve"
+        />
+        <ActionBarItem
+          onPress={() =>
+            openUrl('https://www.rivervalley.org/give/', {
+              externalBrowser: true,
+            })
+          }
+          icon="bank"
           label="Give"
         />
       </ActionBar>

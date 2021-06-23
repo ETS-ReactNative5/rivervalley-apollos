@@ -36,6 +36,15 @@ const ActionTable = () => (
         </RowHeader>
         <TableView>
           <Touchable
+            onPress={() => openUrl('https://www.rivervalley.org/locations/')}
+          >
+            <Cell>
+              <CellText>Find a location</CellText>
+              <CellIcon name="arrow-next" />
+            </Cell>
+          </Touchable>
+          <Divider />
+          <Touchable
             onPress={() => openUrl('https://www.rivervalley.org/next/')}
           >
             <Cell>
@@ -44,25 +53,6 @@ const ActionTable = () => (
             </Cell>
           </Touchable>
           <Divider />
-          <Touchable
-            onPress={() =>
-              openUrl('https://www.rivervalley.org/next-steps/serve/')
-            }
-          >
-            <Cell>
-              <CellText>Find a serving opportunity</CellText>
-              <CellIcon name="arrow-next" />
-            </Cell>
-          </Touchable>
-          <Divider />
-          <Touchable
-            onPress={() => openUrl('https://www.rivervalley.org/smallgroups/')}
-          >
-            <Cell>
-              <CellText>Join a small group</CellText>
-              <CellIcon name="arrow-next" />
-            </Cell>
-          </Touchable>
           <Touchable
             onPress={() =>
               openUrl('https://www.rivervalley.org/next-steps/water-baptism/')
