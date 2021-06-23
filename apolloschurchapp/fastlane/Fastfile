@@ -67,6 +67,7 @@ platform :android do
 
     upload_to_play_store(
       track: "internal",
+      release_status: 'draft',
       skip_upload_apk: true,
       json_key: "android/key.json",
       package_name: package_name
