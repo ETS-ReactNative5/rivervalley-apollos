@@ -150,7 +150,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.differential.apollos"
+        applicationId "com.rivervalley.churchapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 64
