@@ -43,8 +43,8 @@ const HomeTab = createFeatureFeedTab({
   feedName: 'HOME',
 });
 
-const ReadTab = createFeatureFeedTab({
-  tabName: 'Read',
+const ExploreTab = createFeatureFeedTab({
+  tabName: 'Explore',
   feedName: 'READ',
 });
 
@@ -54,11 +54,6 @@ const WatchTab = createFeatureFeedTab({
   },
   tabName: 'Watch',
   feedName: 'WATCH',
-});
-
-const PrayTab = createFeatureFeedTab({
-  tabName: 'Pray',
-  feedName: 'PRAY',
 });
 
 const { Navigator, Screen } = createBottomTabNavigator();
@@ -87,19 +82,15 @@ const TabNavigator = () => {
         options={{ tabBarIcon: tabBarIcon('house') }}
       />
       <Screen
-        name="Read"
-        component={ReadTab}
-        options={{ tabBarIcon: tabBarIcon('read') }}
-      />
-      <Screen
         name="Watch"
         component={WatchTab}
         options={{ tabBarIcon: tabBarIcon('watch') }}
       />
+
       <Screen
-        name="Pray"
-        component={PrayTab}
-        options={{ tabBarIcon: tabBarIcon('like') }}
+        name="Explore"
+        component={ExploreTab}
+        options={{ tabBarIcon: tabBarIcon('explore') }}
       />
       <Screen
         name="Connect"
