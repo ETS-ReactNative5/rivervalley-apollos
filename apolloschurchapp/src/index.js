@@ -89,7 +89,7 @@ const App = () => (
             component={ContentSingle}
             options={{
               title: 'Content',
-              stackPresentation: 'push',
+              stackPresentation: 'containedModal',
             }}
           />
           <Screen

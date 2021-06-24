@@ -176,14 +176,14 @@ TABS:
           channelIds:
             - 35
       type: HorizontalCardList
-      subtitle: All Message Series
+      title: All Message Series
     - algorithms:
       - type: CONTENT_FEED
         arguments:
           channelIds:
             - 33
       type: HorizontalCardList
-      subtitle: All DiscipleU Series
+      title: All DiscipleU Series
 
   PRAY:
     - algorithms: [DAILY_PRAYER]
