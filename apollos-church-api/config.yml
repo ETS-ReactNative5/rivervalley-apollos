@@ -68,6 +68,7 @@ DATABASE:
 
 # This key holds various properties that allow our GraphQL server to map to your Rock Instance
 ROCK_MAPPINGS:
+  CAMPAIGN_CHANNEL_IDS: []
   CONTENT_ITEM:
     ContentSeriesContentItem:
       # When resolving "ContentSeriesContentItem" look in rock for a "ContentChannelItem"
@@ -103,40 +104,49 @@ ROCK_MAPPINGS:
 
 TABS:
   HOME:
-    - algorithms:
-      - type: CONTENT_FEED
-        arguments:
-          channelIds:
-            - 31
-          limit: 1
+    - algorithms: [DAILY_PRAYER]
+      isCard: false
+      type: PrayerList
+      title: Daily Prayer
+    - title: Daily Scripture
+      algorithms:
+        - type: CONTENT_FEED
+          arguments:
+            limit: 1
+            channelIds:
+              - 32
       type: VerticalCardList
-    - algorithms:
-      - type: CONTENT_FEED
-        arguments:
-          channelIds:
-            - 32
-          limit: 1
-      - type: GO_PRAY
-      type: ActionList
-      title: TODAY
-      subtitle: DAILY GROWTH
-    - algorithms:
-      - type: CONTENT_FEED
-        arguments:
-          channelIds:
-            - 31
-          skip: 1
-      type: VerticalCardList
+    - title: Next up in DiscipleU
+      algorithms:
+        - type: DISCIPLEU_NEXT_UP
+          arguments:
+            limit: 6
+            channelIds:
+              - 33
+      type: HorizontalCardList
 
   READ:
     - algorithms:
       - type: CONTENT_FEED
         arguments:
           channelIds:
-            - 32
-          limit: 1
+            - 31
+          limit: 3
       type: VerticalCardList
-    - type: HorizontalCardList
+    - title: Upcoming
+      subtitle: Events
+      algorithms: [UPCOMING_EVENTS]
+      type: ActionList
+      primaryAction:
+        # Right now, you hardcode exactly what GraphQL should return.
+        # Long term, we hope to have a more sophisticated mechanism for driving this field
+        action: OPEN_URL
+        title: 'Event Calendar'
+        relatedNode:
+          __typename: Url
+          url: 'https://myrock.rivervalley.org/page/972'
+    - subtitle: Read the Bible
+      type: HorizontalCardList
       algorithms:
         - type: CONTENT_FEED
           arguments:
@@ -144,28 +154,36 @@ TABS:
               - 32
 
   WATCH:
-    - algorithms:
+    - title: Latest Messages
+      algorithms:
       - type: CONTENT_FEED
         arguments:
-          limit: 1
+          limit: 5
           channelIds:
-            - 34
             - 36
-      type: VerticalCardList
+      type: HeroList
+      primaryAction:
+        # Right now, you hardcode exactly what GraphQL should return.
+        # Long term, we hope to have a more sophisticated mechanism for driving this field
+        action: OPEN_CHANNEL
+        title: 'All messages'
+        relatedNode:
+          __typename: ContentChannel
+          id: 36
     - algorithms:
       - type: CONTENT_FEED
         arguments:
           channelIds:
             - 35
       type: HorizontalCardList
-      subtitle: Message Series
+      title: All Message Series
     - algorithms:
       - type: CONTENT_FEED
         arguments:
           channelIds:
             - 33
       type: HorizontalCardList
-      subtitle: DiscipleU Series
+      title: All DiscipleU Series
 
   PRAY:
     - algorithms: [DAILY_PRAYER]
