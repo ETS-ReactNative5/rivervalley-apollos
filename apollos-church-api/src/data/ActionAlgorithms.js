@@ -26,7 +26,10 @@ class dataSource extends ActionAlgorithm.dataSource {
       });
     }
 
-    return nextUp.slice(0, limit);
+    let start = 0;
+    if (nextUp[0].id === 'EmptyCard') start = 1;
+
+    return nextUp.slice(start, limit);
   }
 
   async goPray() {
