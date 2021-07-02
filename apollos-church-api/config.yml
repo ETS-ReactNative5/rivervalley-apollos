@@ -153,6 +153,13 @@ TABS:
           arguments:
             channelIds:
               - 32
+    - subtitle: Go Kids SOAP
+      type: HorizontalCardList
+      algorithms:
+        - type: CONTENT_FEED
+          arguments:
+            channelIds:
+              - 37
 
   WATCH:
     - title: Latest Messages
