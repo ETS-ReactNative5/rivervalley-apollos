@@ -107,8 +107,8 @@ TABS:
     - algorithms: [DAILY_PRAYER]
       isCard: false
       type: PrayerList
-      title: Daily Prayer
-    - title: Daily Scripture
+      subtitle: Daily Prayer
+    - subtitle: Daily Scripture
       algorithms:
         - type: CONTENT_FEED
           arguments:
@@ -116,7 +116,7 @@ TABS:
             channelIds:
               - 32
       type: VerticalCardList
-    - title: Next up in DiscipleU
+    - subtitle: Next up in DiscipleU
       algorithms:
         - type: DISCIPLEU_NEXT_UP
           arguments:
@@ -162,7 +162,7 @@ TABS:
               - 37
 
   WATCH:
-    - title: Latest Messages
+    - subtitle: Latest Messages
       algorithms:
       - type: CONTENT_FEED
         arguments:
@@ -184,14 +184,14 @@ TABS:
           channelIds:
             - 35
       type: HorizontalCardList
-      title: All Message Series
+      subtitle: All Message Series
     - algorithms:
       - type: CONTENT_FEED
         arguments:
           channelIds:
             - 33
       type: HorizontalCardList
-      title: All DiscipleU Series
+      subtitle: All DiscipleU Series
 
   PRAY:
     - algorithms: [DAILY_PRAYER]

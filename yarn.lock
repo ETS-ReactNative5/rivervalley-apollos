@@ -359,10 +359,10 @@
     graphql-tag "2.9.2"
     yup "^0.27.0"
 
-"@apollosproject/ui-connected@^2.25.1-canary.2":
-  version "2.25.1-canary.2"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-connected/-/ui-connected-2.25.1-canary.2.tgz#6e045a858a9fcf64327eb565658f34619d991af1"
-  integrity sha512-zQDQjWgpk2dazZvn6PnHJD/zJwqWpoLIeH8+Cqli4usr2wtN96M2Kmkrq9yO4KRgqwfUnLh79cN7Z7ofMishvA==
+"@apollosproject/ui-connected@^2.25.1-canary.7":
+  version "2.25.1-canary.9"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-connected/-/ui-connected-2.25.1-canary.9.tgz#ffcb6cc8079f539d08faf10e3b0d630f7df087e0"
+  integrity sha512-nxHMcwPmzz8cfGdNiuIWDzxzZITP+NxK+JYAqTQBIq2sguyfNEyYI0/aBeN1xuHhtGVewIpAkYjSgv6NgfQweQ==
   dependencies:
     apollo-upload-client "14.1.3"
     graphql-tag "2.9.2"
@@ -383,10 +383,10 @@
     entities "^1.1.2"
     htmlparser2 "3.9.2"
 
-"@apollosproject/ui-kit@^2.25.1-canary.2":
-  version "2.25.1-canary.2"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-kit/-/ui-kit-2.25.1-canary.2.tgz#e80f56a0a772bd490f687bcc79332941ef3d073b"
-  integrity sha512-+T4uBgnUHmzchG7QAVbReT2wlywE5C9zGn4/OXHEnh7aBUXdBEtVNEoUXjjhMY84nWWbFX1IQc+7v/NLLG1Klw==
+"@apollosproject/ui-kit@^2.25.1-canary.7":
+  version "2.25.1-canary.7"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-kit/-/ui-kit-2.25.1-canary.7.tgz#c2aa30bca5e847a32119355fb48717e3a41d4c3e"
+  integrity sha512-94IXAvO9DpmgpobDIhJtpZC+8fSlvnlT7JpX2Trxexp2zSNtPohbeKoQe4PLYzl/IBglmqB9SfhfJrept0obhQ==
   dependencies:
     "@react-native-community/blur" "^3.6.0"
     color "^3.1.0"
@@ -406,10 +406,10 @@
   dependencies:
     graphql-tag "2.9.2"
 
-"@apollosproject/ui-media-player@^2.25.1-canary.2":
-  version "2.25.1-canary.2"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-media-player/-/ui-media-player-2.25.1-canary.2.tgz#627b66be4307c969b417569e1f7d2348fcd340a6"
-  integrity sha512-Nc4dMb+ve6Z40H1jYrrx/WFcZJ1Nkh2M90RsCyDwc+wN1kc5sRPn/v+NoE9iz5T8Uar5LN7JBBsrnk66K2LVNw==
+"@apollosproject/ui-media-player@^2.25.1-canary.3":
+  version "2.25.1-canary.3"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-media-player/-/ui-media-player-2.25.1-canary.3.tgz#e066f8bcae46d50431d21d01d3f4f89961849976"
+  integrity sha512-QdRT3aE3HnvbbNgl3P1MxGBR1m4bivA8YPNvfDujRBUBr8VqJPBECfbu3L4lqHVWb2a6WG1R8TwIcjf0v3WR0Q==
   dependencies:
     "@types/color" "^3.0.1"
     color "^3.1.2"
@@ -446,10 +446,10 @@
   dependencies:
     graphql-tag "^2.10.1"
 
-"@apollosproject/ui-prayer@^2.25.1-canary.2":
-  version "2.25.1-canary.2"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-prayer/-/ui-prayer-2.25.1-canary.2.tgz#8806a92469e6ff8067ec4177364a7e56abb0548d"
-  integrity sha512-W/U3l3QpkC9iImHbchONPZ53SUHEqMGJeDQReeoGAluul16lvdZt0aiJ/bAFEHyMtKpSU+yXMNsRKC7zfM4oIg==
+"@apollosproject/ui-prayer@^2.25.1-canary.4":
+  version "2.25.1-canary.4"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-prayer/-/ui-prayer-2.25.1-canary.4.tgz#cf1cc01f9041884a7901c2c210ddecb3428fdf9b"
+  integrity sha512-6pwNmVg2C45JiOebix595KyFLUO2UvjUU1yCmdQ8bSDplS/7BkGQkI0X4sUI+jSpnQGrekVqveX3QA3djwkhzA==
   dependencies:
     formik "1.5.1"
     graphql-tag "2.9.2"
