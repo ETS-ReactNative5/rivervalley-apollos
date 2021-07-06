@@ -54,7 +54,7 @@
     "@apollosproject/ui-htmlview": "^2.25.1-canary.2",
     "@apollosproject/ui-kit": "^2.25.1-canary.7",
     "@apollosproject/ui-mapview": "^2.25.1-canary.2",
-    "@apollosproject/ui-media-player": "^2.25.1-canary.3",
+    "@apollosproject/ui-media-player": "2.25.0",
     "@apollosproject/ui-notifications": "^2.25.1-canary.2",
     "@apollosproject/ui-onboarding": "^2.25.1-canary.2",
     "@apollosproject/ui-passes": "^2.25.1-canary.2",

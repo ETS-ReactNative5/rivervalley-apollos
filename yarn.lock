@@ -406,10 +406,10 @@
   dependencies:
     graphql-tag "2.9.2"
 
-"@apollosproject/ui-media-player@^2.25.1-canary.3":
-  version "2.25.1-canary.3"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-media-player/-/ui-media-player-2.25.1-canary.3.tgz#e066f8bcae46d50431d21d01d3f4f89961849976"
-  integrity sha512-QdRT3aE3HnvbbNgl3P1MxGBR1m4bivA8YPNvfDujRBUBr8VqJPBECfbu3L4lqHVWb2a6WG1R8TwIcjf0v3WR0Q==
+"@apollosproject/ui-media-player@2.25.0":
+  version "2.25.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-media-player/-/ui-media-player-2.25.0.tgz#be3812ab87e3b275690c559fda75bf2164dbdd01"
+  integrity sha512-P9NxtbPwiQkCVKFsV8/No/jm6N5FNeQgGu4I4hDLIzkMeJffv8i0SgpyFx71J9fEf/9u+wAo5kmja5Wt7SxGUw==
   dependencies:
     "@types/color" "^3.0.1"
     color "^3.1.2"
