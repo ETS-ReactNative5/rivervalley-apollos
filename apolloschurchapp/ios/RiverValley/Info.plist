@@ -79,6 +79,12 @@
 		<string>Inter-UI-Medium.otf</string>
 		<string>Inter-UI-MediumItalic.otf</string>
 		<string>Inter-UI-Regular.otf</string>
+		<string>Realist-Bold.otf</string>
+		<string>Realist-BoldItalic.otf</string>
+		<string>Realist-Medium.otf</string>
+		<string>Realist-MediumItalic.otf</string>
+		<string>Realist-Regular.otf</string>
+		<string>Realist-RegularItalic.otf</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>

@@ -40,6 +40,12 @@
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
 		EF3A30A2E55D4F8352E116D3 /* libPods-RiverValley-RiverValleyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D0F1F316A88242D1FD60FB /* libPods-RiverValley-RiverValleyTests.a */; };
 		FCB3069DB5DD4170B2CAEFC4 /* Inter-UI-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A460FD7884FD4574A818005A /* Inter-UI-MediumItalic.otf */; };
+		B011F7687B80414FAEC9C00A /* Realist-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 796DDE369D8247878D00A48A /* Realist-Bold.otf */; };
+		ABFD770C970F499E85067A0B /* Realist-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF27F813A4E648B8A916D55A /* Realist-BoldItalic.otf */; };
+		0B4664AE3AA040E8AC1B0214 /* Realist-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C9452E90BDA147E8B1F87BD4 /* Realist-Medium.otf */; };
+		C1F4E34D4771492D8C076D5E /* Realist-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D78F81038B9D46CA860031BB /* Realist-MediumItalic.otf */; };
+		EE47793E950F4EA9B77C3734 /* Realist-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F64E29DF202E479292B999A4 /* Realist-Regular.otf */; };
+		472CD2F2296C4878815EF34D /* Realist-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 302018D1C2064222B0F2496A /* Realist-RegularItalic.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +114,12 @@
 		EC21254B449443F99016EBFD /* Inter-UI-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Black.otf"; path = "../assets/fonts/Inter-UI-Black.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		796DDE369D8247878D00A48A /* Realist-Bold.otf */ = {isa = PBXFileReference; name = "Realist-Bold.otf"; path = "../assets/fonts/Realist-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DF27F813A4E648B8A916D55A /* Realist-BoldItalic.otf */ = {isa = PBXFileReference; name = "Realist-BoldItalic.otf"; path = "../assets/fonts/Realist-BoldItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C9452E90BDA147E8B1F87BD4 /* Realist-Medium.otf */ = {isa = PBXFileReference; name = "Realist-Medium.otf"; path = "../assets/fonts/Realist-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D78F81038B9D46CA860031BB /* Realist-MediumItalic.otf */ = {isa = PBXFileReference; name = "Realist-MediumItalic.otf"; path = "../assets/fonts/Realist-MediumItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F64E29DF202E479292B999A4 /* Realist-Regular.otf */ = {isa = PBXFileReference; name = "Realist-Regular.otf"; path = "../assets/fonts/Realist-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		302018D1C2064222B0F2496A /* Realist-RegularItalic.otf */ = {isa = PBXFileReference; name = "Realist-RegularItalic.otf"; path = "../assets/fonts/Realist-RegularItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +225,12 @@
 				DC74A378C1CC40E4B6192D7F /* Inter-UI-Medium.otf */,
 				A460FD7884FD4574A818005A /* Inter-UI-MediumItalic.otf */,
 				A613256118404CB691DE2C8E /* Inter-UI-Regular.otf */,
+				796DDE369D8247878D00A48A /* Realist-Bold.otf */,
+				DF27F813A4E648B8A916D55A /* Realist-BoldItalic.otf */,
+				C9452E90BDA147E8B1F87BD4 /* Realist-Medium.otf */,
+				D78F81038B9D46CA860031BB /* Realist-MediumItalic.otf */,
+				F64E29DF202E479292B999A4 /* Realist-Regular.otf */,
+				302018D1C2064222B0F2496A /* Realist-RegularItalic.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -441,6 +459,12 @@
 				FCB3069DB5DD4170B2CAEFC4 /* Inter-UI-MediumItalic.otf in Resources */,
 				AB3BD177B8A14193A5EEDDF8 /* Inter-UI-Regular.otf in Resources */,
 				4CA6A042251BC0BF00DD0D97 /* SplashScreen.storyboard in Resources */,
+				B011F7687B80414FAEC9C00A /* Realist-Bold.otf in Resources */,
+				ABFD770C970F499E85067A0B /* Realist-BoldItalic.otf in Resources */,
+				0B4664AE3AA040E8AC1B0214 /* Realist-Medium.otf in Resources */,
+				C1F4E34D4771492D8C076D5E /* Realist-MediumItalic.otf in Resources */,
+				EE47793E950F4EA9B77C3734 /* Realist-Regular.otf in Resources */,
+				472CD2F2296C4878815EF34D /* Realist-RegularItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

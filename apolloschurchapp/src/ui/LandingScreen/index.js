@@ -1,26 +1,21 @@
 import React from 'react';
-import { StyleSheet, Image } from 'react-native';
-import { styled, withTheme } from '@apollosproject/ui-kit';
+import { StyleSheet, View } from 'react-native';
+import { styled } from '@apollosproject/ui-kit';
 
-import LandingScreen from './LandingScreen';
+import { Landing } from '@apollosproject/ui-onboarding';
 
-const FullScreenImage = styled({
+const Background = styled(({ theme }) => ({
   resizeMode: 'cover',
   ...StyleSheet.absoluteFill,
   width: '100%',
   height: '100%',
-})(Image);
-
-const ThemedLandingScreen = withTheme(({ theme }) => ({
-  textColor: theme.colors.primary,
-}))(LandingScreen);
+  backgroundColor: theme.colors.tertiary,
+}))(View);
 
 const LandingScreenSlide = ({ navigation }) => (
-  <ThemedLandingScreen
+  <Landing
     onPressPrimary={() => navigation.push('Auth')}
-    BackgroundComponent={
-      <FullScreenImage source={require('./img/landing.jpg')} />
-    }
+    BackgroundComponent={<Background source={require('./img/landing.jpg')} />}
     primaryNavText={"Let's go!"}
   />
 );

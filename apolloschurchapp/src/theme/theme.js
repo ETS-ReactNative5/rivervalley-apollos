@@ -1,10 +1,3 @@
-import React from 'react';
-import {
-  DefaultCard,
-  FeaturedCard,
-  HorizontalDefaultCard,
-} from '@apollosproject/ui-kit';
-
 // import styleOverrides from './styleOverrides';
 // import propOverrides from './propOverrides';
 
@@ -18,9 +11,32 @@ import {
  * on a per-component basis with "overrides"
  */
 const colors = {
-  primary: '#000000',
-  secondary: '#8e8e93',
-  tertiary: '#8e8e93',
+  primary: '#20242B',
+  secondary: '#ABA7A5',
+  tertiary: '#EFECEA',
+};
+
+const typography = {
+  // baseFontSize: 18,
+  // baseLineHeight: 27, // 1.5 ratio
+  sans: {
+    regular: {
+      default: 'Realist-Regular',
+      italic: 'Realist-RegularItalic',
+    },
+    medium: {
+      default: 'Realist-Medium',
+      italic: 'Realist-MediumItalic',
+    },
+    bold: {
+      default: 'Realist-Bold',
+      italic: 'Realist-BoldItalic',
+    },
+    black: {
+      default: 'Realist-Bold',
+      italic: 'Realist-BoldItalic',
+    },
+  },
 };
 
 /* Base Typography sizing and fonts.
@@ -63,19 +79,10 @@ const colors = {
  * ```
  */
 
-const cardMapper = (props) => {
-  if (props.isFeatured) {
-    return <FeaturedCard {...props} />;
-  }
-  return <DefaultCard {...props} />;
+const overrides = {
+  'ui-onboarding.Landing.BrandIcon': (theme) => ({
+    fill: theme.colors.secondary,
+  }),
 };
 
-const overrides = {
-  'ui-connected.ContentCardConnected.ContentCardComponentMapper': () => () => ({
-    Component: cardMapper,
-  }),
-  'ui-connected.HorizontalContentCardConnected.HorizontalContentCardComponentMapper': () => () => ({
-    Component: HorizontalDefaultCard,
-  }),
-};
-export default { colors, overrides };
+export default { colors, overrides, typography };
