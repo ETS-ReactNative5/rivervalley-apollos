@@ -9,7 +9,7 @@ const Toolbar = () => (
         <ActionBarItem
           onPress={() => openUrl('https://www.rivervalley.org/smallgroups/')}
           icon="groups"
-          label="Small Groups"
+          label="Groups"
         />
         <ActionBarItem
           onPress={() =>
