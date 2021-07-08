@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { styled } from '@apollosproject/ui-kit';
+import { BackgroundView, styled } from '@apollosproject/ui-kit';
 
 import { Landing } from '@apollosproject/ui-onboarding';
 
@@ -9,8 +9,8 @@ const Background = styled(({ theme }) => ({
   ...StyleSheet.absoluteFill,
   width: '100%',
   height: '100%',
-  backgroundColor: theme.colors.tertiary,
-}))(View);
+  // backgroundColor: theme.colors.tertiary,
+}))(BackgroundView);
 
 const LandingScreenSlide = ({ navigation }) => (
   <Landing

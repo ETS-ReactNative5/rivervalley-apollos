@@ -10,8 +10,14 @@
  * elements are colored, go there. The next level of control comes
  * on a per-component basis with "overrides"
  */
-const colors = {
+const lightColors = {
   primary: '#20242B',
+  secondary: '#ABA7A5',
+  tertiary: '#EFECEA',
+};
+
+const darkColors = {
+  primary: '#EFECEA',
   secondary: '#ABA7A5',
   tertiary: '#EFECEA',
 };
@@ -35,6 +41,25 @@ const typography = {
     black: {
       default: 'Realist-Bold',
       italic: 'Realist-BoldItalic',
+    },
+  },
+};
+
+const types = {
+  // light: {
+  //   colors: {
+  //     primary: '#20242B',
+  //     secondary: '#ABA7A5',
+  //     tertiary: '#EFECEA',
+  //   },
+  // },
+  dark: {
+    colors: {
+      action: {
+        primary: '#ABA7A5',
+        // default: 'green',
+        // secondary: 'blue',
+      },
     },
   },
 };
@@ -85,4 +110,4 @@ const overrides = {
   }),
 };
 
-export default { colors, overrides, typography };
+export default { lightColors, darkColors, overrides, typography, types };
