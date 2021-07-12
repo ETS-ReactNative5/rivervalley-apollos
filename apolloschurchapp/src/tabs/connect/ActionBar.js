@@ -20,7 +20,7 @@ const Toolbar = () => (
         />
         <ActionBarItem
           onPress={() =>
-            openUrl('https://www.rivervalley.org/give/', {
+            openUrl('https://pysly.co/RBTZt', {
               externalBrowser: true,
             })
           }
