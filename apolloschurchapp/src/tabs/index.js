@@ -79,7 +79,7 @@ const TabNavigator = () => {
       <Screen
         name="Home"
         component={HomeTab}
-        options={{ tabBarIcon: tabBarIcon('house') }}
+        options={{ tabBarIcon: tabBarIcon('brand-icon') }}
       />
       <Screen
         name="Watch"

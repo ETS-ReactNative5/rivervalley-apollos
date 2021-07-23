@@ -108,6 +108,10 @@ const overrides = {
   'ui-onboarding.Landing.BrandIcon': (theme) => ({
     fill: theme.colors.secondary,
   }),
+  ScriptureText: (theme) => ({
+    fontSize: theme.helpers.rem(1.25),
+    lineHeight: theme.helpers.verticalRhythm(1.5, 1.625),
+  }),
 };
 
 export default { lightColors, darkColors, overrides, typography, types };
