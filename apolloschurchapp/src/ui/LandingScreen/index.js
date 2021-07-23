@@ -15,7 +15,7 @@ const Background = styled(({ theme }) => ({
 const LandingScreenSlide = ({ navigation }) => (
   <Landing
     onPressPrimary={() => navigation.push('Auth')}
-    BackgroundComponent={<Background source={require('./img/landing.jpg')} />}
+    BackgroundComponent={<Background />}
     primaryNavText={"Let's go!"}
   />
 );
