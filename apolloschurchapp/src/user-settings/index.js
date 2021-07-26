@@ -100,7 +100,7 @@ const UserSettings = () => {
               <TableView>
                 <Touchable
                   onPress={() => {
-                    openUrl('mailto:support@apollos.app');
+                    openUrl('mailto:marketing@rivervalley.org');
                   }}
                 >
                   <Cell>
