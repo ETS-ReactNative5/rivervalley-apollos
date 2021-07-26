@@ -20,16 +20,11 @@ or alternatively using `brew install fastlane`
 ```
 fastlane ios deploy
 ```
-Push a new beta build to TestFlight
+Push a new internal build to TestFlight
 
 ----
 
 ## Android
-### android bump_version_code
-```
-fastlane android bump_version_code
-```
-Bumps Android versionCode
 ### android deploy
 ```
 fastlane android deploy
