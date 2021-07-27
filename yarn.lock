@@ -337,6 +337,20 @@
     graphql-tag "^2.10.0"
     lodash "^4.17.11"
 
+"@apollosproject/server-core@^2.27.3-canary.4":
+  version "2.27.3-canary.4"
+  resolved "https://registry.yarnpkg.com/@apollosproject/server-core/-/server-core-2.27.3-canary.4.tgz#51007babc01fe554b8bc80a2a1515b86dc29e8c5"
+  integrity sha512-At7d0fAwDY8d5fYEbao153dL1PxhRLNpcVXjqHRDA7N46DybnRO4mlMZrQuGiTx43T60WIs7Q3Wm0+P6OLLxnw==
+  dependencies:
+    "@apollosproject/data-schema" "^2.27.2"
+    apollo-server-caching "^0.4.0"
+    bull "^3.11.0"
+    bull-board "^0.1.1"
+    express-basic-auth "^1.2.0"
+    graphql-parse-resolve-info "^4.4.5"
+    graphql-tag "^2.10.0"
+    lodash "^4.17.11"
+
 "@apollosproject/ui-analytics@^2.27.2":
   version "2.27.2"
   resolved "https://registry.yarnpkg.com/@apollosproject/ui-analytics/-/ui-analytics-2.27.2.tgz#6b9dfde4850ecb2239ba5c559726254e6b8ad13c"

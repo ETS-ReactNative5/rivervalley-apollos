@@ -34,7 +34,7 @@
     "@apollosproject/data-connector-twilio": "^2.27.2",
     "@apollosproject/data-schema": "^2.27.2",
     "@apollosproject/rock-apollo-data-source": "^2.27.2",
-    "@apollosproject/server-core": "^2.27.2",
+    "@apollosproject/server-core": "^2.27.3-canary.4",
     "apollo-server": "^2.24.1",
     "apollo-server-express": "2.14.2",
     "color": "3.0.0",
