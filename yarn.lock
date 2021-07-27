@@ -354,10 +354,10 @@
     graphql-tag "2.9.2"
     yup "^0.27.0"
 
-"@apollosproject/ui-connected@^2.27.2":
-  version "2.27.2"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-connected/-/ui-connected-2.27.2.tgz#107b03a3ef8b9b865ea03d747342dcdb821945af"
-  integrity sha512-h3PrK0oi12cpMiUkmSRGulZqLbP2yfae6TwsMIkwsqo+9PVxewiyumPb1LLo20hH3zFMmaIExNAY18vOHXZvxg==
+"@apollosproject/ui-connected@^2.27.3-canary.5":
+  version "2.27.3-canary.5"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-connected/-/ui-connected-2.27.3-canary.5.tgz#507e3062080bfc56503c450c8f704f149de6fda7"
+  integrity sha512-kdio2GZcnDPZbjUZFZsVLDl8yepGWV4zZnkvOoJqW4WCCN4tRWAkOcZlzmD0PO71LvzbcnVIrbnj7GYNmlCtDw==
   dependencies:
     apollo-upload-client "14.1.3"
     graphql-tag "2.9.2"
