@@ -27,7 +27,7 @@ import {
   Campus,
   Group,
   BinaryFiles,
-  // Feature,
+  Feature,
   FeatureFeed,
   // ActionAlgorithm,
   Event,
@@ -37,7 +37,7 @@ import {
 } from '@apollosproject/data-connector-rock';
 
 import {
-  // Comment,
+  Comment,
   UserFlag,
   UserLike,
   Follow,
@@ -48,8 +48,6 @@ import {
 import * as HopeStream from './HopeStream';
 import * as Theme from './theme';
 import * as ActionAlgorithm from './ActionAlgorithms';
-import * as Feature from './Feature';
-import * as Comment from './Comment';
 
 // This modules ties together certain updates so they occurs in both Rock and Postgres.
 // Will be eliminated in the future through an enhancement to the Shovel

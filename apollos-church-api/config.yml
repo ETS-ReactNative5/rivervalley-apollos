@@ -133,19 +133,6 @@ TABS:
             - 31
           limit: 3
       type: VerticalCardList
-      # maybe bring back later
-    #- title: Upcoming
-      #subtitle: Events
-      #algorithms: [UPCOMING_EVENTS]
-      #type: ActionList
-      #primaryAction:
-        ## Right now, you hardcode exactly what GraphQL should return.
-        ## Long term, we hope to have a more sophisticated mechanism for driving this field
-        #action: OPEN_URL
-        #title: 'Event Calendar'
-        #relatedNode:
-          #__typename: Url
-          #url: 'https://myrock.rivervalley.org/page/972'
     - subtitle: Read the Bible
       type: HorizontalCardList
       algorithms:
