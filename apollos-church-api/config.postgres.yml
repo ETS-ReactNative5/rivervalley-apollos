@@ -67,7 +67,7 @@ DATABASE:
   URL: ${DATABASE_URL}
 
 CONTENT:
-  SERMON_CHANNEL_ID: 1257fa2a-c75a-4d46-9d17-ba380a57ba11
+  SERMON_CHANNEL_ID: 8aa1c855-82dc-44a1-bf22-8dd47aff9156
   TYPES:
     - ContentSeriesContentItem
     - DevotionalContentItem
@@ -88,7 +88,7 @@ TABS:
           arguments:
             limit: 1
             channelIds:
-              - 02e774f4-d636-4c4a-8be5-e0b1067aa9fc
+              - 299478a2-2bb9-4a8c-8158-49aa6399d28f
       type: VerticalCardList
     - subtitle: Next up in DiscipleU
       algorithms:
@@ -96,7 +96,7 @@ TABS:
           arguments:
             limit: 6
             channelIds:
-              - a2598288-b8bc-4857-b281-2d72765c78de
+              - 2533d86c-1e3b-4892-b8f5-7ec74c7bac79
       type: HorizontalCardList
 
   READ:
@@ -104,7 +104,7 @@ TABS:
       - type: CONTENT_FEED
         arguments:
           channelIds:
-            - b9e06a24-507b-48dc-b331-4491dc825dcd
+            - e45fda8b-0498-4cd4-a8ea-047080585afb
           limit: 3
       type: VerticalCardList
     - subtitle: Read the Bible
@@ -113,14 +113,14 @@ TABS:
         - type: CONTENT_FEED
           arguments:
             channelIds:
-              - 02e774f4-d636-4c4a-8be5-e0b1067aa9fc
+              - 299478a2-2bb9-4a8c-8158-49aa6399d28f
     - subtitle: Go Kids SOAP
       type: HorizontalCardList
       algorithms:
         - type: CONTENT_FEED
           arguments:
             channelIds:
-              - 912256d6-3f4b-4af7-9939-ad1a130ce757
+              - 01d44686-53b0-4921-a0b2-b034d1cf05e1
 
   WATCH:
     - subtitle: Latest Messages
@@ -129,7 +129,7 @@ TABS:
         arguments:
           limit: 5
           channelIds:
-            - 1257fa2a-c75a-4d46-9d17-ba380a57ba11
+            - 8aa1c855-82dc-44a1-bf22-8dd47aff9156
       type: HeroList
       primaryAction:
         # Right now, you hardcode exactly what GraphQL should return.
@@ -138,19 +138,19 @@ TABS:
         title: 'All messages'
         relatedNode:
           __typename: ContentChannel
-          id: 1257fa2a-c75a-4d46-9d17-ba380a57ba11
+          id: 8aa1c855-82dc-44a1-bf22-8dd47aff9156
     - algorithms:
       - type: CONTENT_FEED
         arguments:
           channelIds:
-            - b336c424-ad7d-4654-ad0c-7317431d1d26
+            - e9db0f24-e01a-4241-bd81-3450325d7284
       type: HorizontalCardList
       subtitle: All Message Series
     - algorithms:
       - type: CONTENT_FEED
         arguments:
           channelIds:
-            - a2598288-b8bc-4857-b281-2d72765c78de
+            - 2533d86c-1e3b-4892-b8f5-7ec74c7bac79
       type: HorizontalCardList
       subtitle: All DiscipleU Series
 
