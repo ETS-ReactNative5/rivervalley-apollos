@@ -32,6 +32,7 @@ class dataSource extends ActionAlgorithm.dataSource {
     return nextUp.slice(start, limit);
   }
 
+  // eslint-disable-next-line class-methods-use-this
   async goPray() {
     return [
       {
