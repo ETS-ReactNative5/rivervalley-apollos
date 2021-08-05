@@ -25,7 +25,6 @@ import {
   Campus,
   Group,
   BinaryFiles,
-  Feature,
   FeatureFeed,
   Event,
   PrayerRequest,
@@ -41,7 +40,7 @@ import {
   Campus as PostgresCampus,
   Person as PostgresPerson,
   Media as PostgresMedia,
-  Feature as PostgresFeature,
+  Feature,
   Tag,
   ContentItem,
   ContentItemsConnection,
@@ -54,20 +53,25 @@ import * as ActionAlgorithm from './ActionAlgorithms';
 
 // This modules ties together certain updates so they occurs in both Rock and Postgres.
 // Will be eliminated in the future through an enhancement to the Shovel
-import { Person, OneSignal } from './rockWithPostgres';
+import {
+  Person,
+  OneSignal,
+  Followings as FollowingsPostgresBridge,
+} from './rockWithPostgres';
 
 const data = {
   Interfaces,
   Followings,
-  ContentChannel,
+  FollowingsPostgresBridge,
   ContentItem,
+  ContentItemsConnection,
+  ContentChannel,
   RockPerson, // This entry needs to come before (postgres) Person
   BinaryFiles, // This entry needs to come before (postgres) Person
   PostgresPerson, // Postgres person for now, as we extend this dataSource in the 'rockWithPostgres' file
   PostgresMedia,
-  PostgresFeature,
+  Feature,
   Tag,
-  ContentItemsConnection,
   Cloudinary,
   Auth,
   AuthSms,
@@ -86,7 +90,6 @@ const data = {
   Template,
   Campus,
   Group,
-  Feature,
   FeatureFeed,
   ActionAlgorithm,
   Event,
