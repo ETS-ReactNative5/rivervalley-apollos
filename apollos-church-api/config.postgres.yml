@@ -15,13 +15,13 @@ APP:
   ROOT_API_URL: ${ROOT_URL}
   JOBS_USERNAME: ${JOBS_USERNAME}
   JOBS_PASSWORD: ${JOBS_PASSWORD}
-DATABASE:
-  URL: ${DATABASE_URL}
 BUGSNAG:
   API_KEY: ${BUGSNAG_KEY}
 ROCK:
   URL: ${ROCK_URL}
   API_TOKEN: ${ROCK_TOKEN}
+HOPE_STREAM:
+  TOKEN: ${HOPE_STREAM_TOKEN}
 UNIVERSAL_LINKS:
   APPLE_APP_ID: ${APPLE_APP_ID}
   APPLE_TEAM_ID: ${APPLE_TEAM_ID}
@@ -35,6 +35,14 @@ ONE_SIGNAL:
 CHURCH_ONLINE:
   URL: ${CHURCH_ONLINE_URL}
   WEB_VIEW_URL: https://apollos.online.church/
+SUGGESTED_FOLLOWS:
+  - kirk.graham@rivervalley.org
+  - clynt.reddy@rivervalley.org
+  -
+    id: ce3958ae-4ffa-43a2-b71e-87ec0e68107d #Terry Parkman
+  -
+    id: 01ec6531-41fd-4fdf-b5c8-ad4acd870937 # Rachel Parsons
+  - gabi.orourke@rivervalley.org
 ALGOLIA:
   APPLICATION_ID: ${ALGOLIASEARCH_APPLICATION_ID}
   API_KEY: ${ALGOLIASEARCH_API_KEY}
@@ -52,14 +60,14 @@ PASS:
     SIGNER_KEY_PASSPHRASE: ${PASS_SIGNER_PASSPHRASE}
 BIBLE_API:
   KEY: ${BIBLE_API_KEY}
-  BIBLE_ID:
-    WEB: '9879dbb7cfe39e4d-01'
-    KJV: 'de4e12af7f28f599-02'
+  DEFAULT_VERSION: NLT
 CLOUDINARY:
   URL: ${CLOUDINARY_URL}
+DATABASE:
+  URL: ${DATABASE_URL}
 
 CONTENT:
-  SERMON_CHANNEL_ID: cbc0994a-97f1-471a-a7d5-4eff59d8a389
+  SERMON_CHANNEL_ID: 8aa1c855-82dc-44a1-bf22-8dd47aff9156
   TYPES:
     - ContentSeriesContentItem
     - DevotionalContentItem
@@ -68,152 +76,83 @@ CONTENT:
     - WeekendContentItem
     - ContentItem
 
-
 TABS:
   HOME:
-    - type: ActionBar
-      title: Welcome to Apollos
-      actions:
-        [
-          {
-            title: Check In,
-            icon: check,
-            action: OPEN_URL,
-            relatedNode: { __typename: Url, url: 'https://www.google.com' },
-          },
-        ]
+    - algorithms: [DAILY_PRAYER]
+      isCard: false
+      type: PrayerList
+      subtitle: Daily Prayer
+    - subtitle: Daily Scripture
+      algorithms:
+        - type: CONTENT_FEED
+          arguments:
+            limit: 1
+            channelIds:
+              - 299478a2-2bb9-4a8c-8158-49aa6399d28f
+      type: VerticalCardList
+    - subtitle: Next up in DiscipleU
+      algorithms:
+        - type: DISCIPLEU_NEXT_UP
+          arguments:
+            limit: 6
+            channelIds:
+              - 2533d86c-1e3b-4892-b8f5-7ec74c7bac79
+      type: HorizontalCardList
+
+  READ:
     - algorithms:
       - type: CONTENT_FEED
         arguments:
           channelIds:
-            - c7f43eb9-2200-4267-ab28-871e0d5e785f
-            - 3dfe7149-136b-4134-bd91-fdd935ef2221
-      type: HeroList
-      primaryAction:
-        # Right now, you hardcode exactly what GraphQL should return.
-        # Long term, we hope to have a more sophisticated mechanism for driving this field
-        action: OPEN_NODE
-        title: 'Read More'
-        relatedNode:
-          __typename: UniversalContentItem
-          id: a2c42d1d-98c8-46fb-aeea-603bc569cf7d
-    - algorithms: [DAILY_PRAYER]
-      isCard: false
-      type: PrayerList
-      title: Daily Prayer
-    - algorithms:
-        - type: CAMPAIGN_ITEMS
-          channelIds:
-            - 4b23ebc9-248e-4092-99f9-8829e1b6f1cc
-      type: HeroList
-      isFeatured: true
-      subtitle: Featured
-    - title: FOR YOU
-      algorithms: [SERMON_CHILDREN, PERSONA_FEED]
-      subtitle: Explore what God calls you to today
-      type: ActionList
-    - algorithms: [SERIES_IN_PROGRESS]
-      subtitle: Continue
-      type: HorizontalCardList
-    - title: RECOMMENDED
-      algorithms: [SERMON_CHILDREN]
-      subtitle: For Him
+            - e45fda8b-0498-4cd4-a8ea-047080585afb
+          limit: 3
       type: VerticalCardList
-    - title: BULLETIN
-      subtitle: What's happening at apollos?
-      type: ActionList
+    - subtitle: Read the Bible
+      type: HorizontalCardList
       algorithms:
         - type: CONTENT_FEED
           arguments:
             channelIds:
-              - 13
-        - type: UPCOMING_EVENTS
-
-  READ:
-    - algorithms:
+              - 299478a2-2bb9-4a8c-8158-49aa6399d28f
+    - subtitle: Go Kids SOAP
+      type: HorizontalCardList
+      algorithms:
         - type: CONTENT_FEED
           arguments:
             channelIds:
-              - c7f43eb9-2200-4267-ab28-871e0d5e785f
-            limit: 3
-      type: HorizontalCardList
-      subtitle: Podcast Messages
-      primaryAction:
-        action: OPEN_CHANNEL
-        title: 'Read More'
-        relatedNode:
-          __typename: ContentChannel
-          apollosId: ContentChannel:f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
-          title: Podcast Messages
-    - algorithms:
-        - type: CONTENT_FEED
-          arguments:
-            channelIds:
-              - d9da719f-84ef-4cf0-9875-22fea4bf09eb
-            limit: 3
-      type: HorizontalCardList
-      subtitle: Devotionals
-      primaryAction:
-        action: OPEN_CHANNEL
-        title: 'Read More'
-        relatedNode:
-          __typename: ContentChannel
-          apollosId: ContentChannel:d9da719f-84ef-4cf0-9875-22fea4bf09eb
-          title: Devotionals
+              - 01d44686-53b0-4921-a0b2-b034d1cf05e1
 
   WATCH:
-    - algorithms:
-        - type: LATEST_SERIES_CHILDREN
-          arguments:
-            channelId: 8f0a93f5-ccec-4cc1-8fd8-06afe5982f7b
+    - subtitle: Latest Messages
+      algorithms:
+      - type: CONTENT_FEED
+        arguments:
+          limit: 5
+          channelIds:
+            - 8aa1c855-82dc-44a1-bf22-8dd47aff9156
       type: HeroList
-      title: Catch up
-      subtitle: Latest Series
-    - algorithms:
-        - type: CONTENT_FEED
-          arguments:
-            channelIds:
-              - f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
-      type: VerticalCardList
-      subtitle: All series
-    - algorithms:
-        - type: CONTENT_FEED
-          arguments:
-            channelIds:
-              - 8f0a93f5-ccec-4cc1-8fd8-06afe5982f7b
-            limit: 3
-      type: HorizontalCardList
-      subtitle: Sermons
-    - algorithms:
-        - type: CONTENT_FEED
-          arguments:
-            channelIds:
-              - f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
-            limit: 3
-      type: HorizontalCardList
-      subtitle: Podcasts
       primaryAction:
+        # Right now, you hardcode exactly what GraphQL should return.
+        # Long term, we hope to have a more sophisticated mechanism for driving this field
         action: OPEN_CHANNEL
-        title: 'Read More'
+        title: 'All messages'
         relatedNode:
           __typename: ContentChannel
-          apollosId: ContentChannel:f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
-          title: Podcasts
+          id: 8aa1c855-82dc-44a1-bf22-8dd47aff9156
     - algorithms:
-        - type: CONTENT_FEED
-          arguments:
-            channelIds:
-              - f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
-            limit: 3
+      - type: CONTENT_FEED
+        arguments:
+          channelIds:
+            - e9db0f24-e01a-4241-bd81-3450325d7284
       type: HorizontalCardList
-      title: Videos
-      primaryAction:
-        action: OPEN_CHANNEL
-        title: 'Read More'
-        relatedNode:
-          __typename: ContentChannel
-          apollosId: ContentChannel:f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
-          title: Videos
+      subtitle: All Message Series
+    - algorithms:
+      - type: CONTENT_FEED
+        arguments:
+          channelIds:
+            - 2533d86c-1e3b-4892-b8f5-7ec74c7bac79
+      type: HorizontalCardList
+      subtitle: All DiscipleU Series
 
   PRAY:
     - algorithms: [DAILY_PRAYER]
