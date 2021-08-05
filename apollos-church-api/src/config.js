@@ -22,8 +22,6 @@ ApollosConfig.loadJs({
   if (!ApollosConfig.ROCK.URL || !ApollosConfig.ROCK.API_TOKEN)
     throw new Error('ROCK_URL and ROCK_TOKEN variables are required!');
 
-  let res;
-
   // plugin
 
   // for whatever reason, this endpoint is locked on RV
@@ -38,7 +36,7 @@ ApollosConfig.loadJs({
   ApollosConfig.loadJs({ ROCK: { USE_PLUGIN: true } });
 
   // version
-  res = await fetch(
+  const res = await fetch(
     `${ApollosConfig.ROCK.URL}/api/Utility/GetRockSemanticVersionNumber`,
     { headers: { 'Authorization-Token': ApollosConfig.ROCK.API_TOKEN } }
   );
