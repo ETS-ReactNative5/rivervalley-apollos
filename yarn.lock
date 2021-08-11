@@ -232,13 +232,13 @@
     passkit-generator "1.5.9"
     qrcode "^1.3.3"
 
-"@apollosproject/data-connector-postgres@^2.28.0":
-  version "2.28.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-postgres/-/data-connector-postgres-2.28.0.tgz#e87f3c2db0701dbf674cb8bca96877df92b81acd"
-  integrity sha512-3eREn1ld1YQL4xoLhP95glqe9Kgzmi1lqYkvpP9Abd18Wq2RhNlbg4XozyQX4S1HkRbJNjEhv5TYQRR4eUEueA==
+"@apollosproject/data-connector-postgres@^2.29.4-canary.1":
+  version "2.29.4-canary.1"
+  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-postgres/-/data-connector-postgres-2.29.4-canary.1.tgz#6b59eb8ddf53ed3c95f65cc09ba494479712192a"
+  integrity sha512-rPqPEytJ+J0QE2j6Y5TaC4jdiDXmH3ohZ6ykpnWwn7vvEkbB508C3els0pVjppQDbYNBHBLnC90QRCl97624Zw==
   dependencies:
-    "@apollosproject/data-schema" "^2.28.0"
-    "@apollosproject/server-core" "^2.28.0"
+    "@apollosproject/data-schema" "^2.29.3"
+    "@apollosproject/server-core" "^2.29.3"
     hyphenation.en-us "^0.2.1"
     hypher "^0.2.5"
     lodash "^4.17.11"
@@ -287,6 +287,13 @@
   dependencies:
     "@apollo/client" "3.3.20"
 
+"@apollosproject/data-schema@^2.29.3":
+  version "2.29.3"
+  resolved "https://registry.yarnpkg.com/@apollosproject/data-schema/-/data-schema-2.29.3.tgz#ab6ce1c2cd6dc91f17ce876b3ad6e57edef5bf95"
+  integrity sha512-PBz6qscyr4dh+7gkSaodZMFQ+R7TpcLS4bgvyMkqNq7jDPvAd7xjq+8Eo4glQNhpJ/M2wq9yaz0ceQV47fjgHw==
+  dependencies:
+    "@apollo/client" "3.3.20"
+
 "@apollosproject/eslint-config@^2.27.2", "@apollosproject/eslint-config@^2.28.0":
   version "2.28.0"
   resolved "https://registry.yarnpkg.com/@apollosproject/eslint-config/-/eslint-config-2.28.0.tgz#0d95be177c699bae1079362db2d34cfd7eadf1c2"
@@ -319,6 +326,21 @@
     bull-board "^0.1.1"
     express-basic-auth "^1.2.0"
     graphql-parse-resolve-info "^4.4.5"
+    lodash "^4.17.11"
+
+"@apollosproject/server-core@^2.29.3":
+  version "2.29.3"
+  resolved "https://registry.yarnpkg.com/@apollosproject/server-core/-/server-core-2.29.3.tgz#81f0f036fe6c0135e58bc5860808801fdf457b3e"
+  integrity sha512-UTXbNWZQJpsjigTj/gZlwctbgkwf6EW6+52o76J3MMytINrlX95JF8flh+/PAyWsw3TdUizowdyTcRjEFDnZ5w==
+  dependencies:
+    "@apollo/client" "3.3.20"
+    "@apollosproject/data-schema" "^2.29.3"
+    apollo-server-caching "^0.4.0"
+    bull "^3.11.0"
+    bull-board "^0.1.1"
+    express-basic-auth "^1.2.0"
+    graphql-parse-resolve-info "^4.4.5"
+    graphql-upload "^12.0.0"
     lodash "^4.17.11"
 
 "@apollosproject/ui-analytics@^2.27.2":
@@ -8473,6 +8495,11 @@ fs-capacitor@^2.0.4:
   resolved "https://registry.yarnpkg.com/fs-capacitor/-/fs-capacitor-2.0.4.tgz#5a22e72d40ae5078b4fe64fe4d08c0d3fc88ad3c"
   integrity sha512-8S4f4WsCryNw2mJJchi46YgB6CR5Ze+4L1h8ewl9tEpL4SJ3ZO+c/bS4BWhB8bK+O3TMqhuZarTitd0S0eh2pA==
 
+fs-capacitor@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/fs-capacitor/-/fs-capacitor-6.2.0.tgz#fa79ac6576629163cb84561995602d8999afb7f5"
+  integrity sha512-nKcE1UduoSKX27NSZlg879LdQc94OtbOsEmKMN2MBNudXREvijRKx2GEBsTMTfws+BrbkJoEuynbGSVRSpauvw==
+
 fs-constants@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs-constants/-/fs-constants-1.0.0.tgz#6be0de9be998ce16af8afc24497b9ee9b7ccd9ad"
@@ -8921,6 +8948,17 @@ graphql-tools@^4.0.0, graphql-tools@^4.0.8:
     iterall "^1.1.3"
     uuid "^3.1.0"
 
+graphql-upload@^12.0.0:
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/graphql-upload/-/graphql-upload-12.0.0.tgz#2351d20d294e920fb25d2eba9f7c352e37a1a02b"
+  integrity sha512-ovZ3Q7sZ17Bmn8tYl22MfrpNR7nYM/DUszXWgkue7SFIlI9jtqszHAli8id8ZcnGBc9GF0gUTNSskYWW+5aNNQ==
+  dependencies:
+    busboy "^0.3.1"
+    fs-capacitor "^6.2.0"
+    http-errors "^1.8.0"
+    isobject "^4.0.0"
+    object-path "^0.11.5"
+
 graphql@14.6.0:
   version "14.6.0"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.6.0.tgz#57822297111e874ea12f5cd4419616930cd83e49"
@@ -9172,7 +9210,7 @@ http-errors@1.7.2:
     statuses ">= 1.5.0 < 2"
     toidentifier "1.0.0"
 
-http-errors@^1.7.3:
+http-errors@^1.7.3, http-errors@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/http-errors/-/http-errors-1.8.0.tgz#75d1bbe497e1044f51e4ee9e704a62f28d336507"
   integrity sha512-4I8r0C5JDhT5VkvI47QktDW75rNlGVsUf/8hzjCC/wkWI/jdTRmBb9aI7erSG82r1bjKY3F6k28WnsVxB1C73A==
@@ -12490,7 +12528,7 @@ object-keys@^1.0.11, object-keys@^1.0.12, object-keys@^1.1.0, object-keys@^1.1.1
   resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.1.1.tgz#1c47f272df277f3b1daf061677d9c82e2322c60e"
   integrity sha512-NuAESUOUMrlIXOfHKzD6bpPu3tYt3xvjNdRIQ+FeT0lNb4K8WR70CaDxhuNguS2XG+GjkyMwOzsN5ZktImfhLA==
 
-object-path@^0.11.4:
+object-path@^0.11.4, object-path@^0.11.5:
   version "0.11.5"
   resolved "https://registry.yarnpkg.com/object-path/-/object-path-0.11.5.tgz#d4e3cf19601a5140a55a16ad712019a9c50b577a"
   integrity sha512-jgSbThcoR/s+XumvGMTMf81QVBmah+/Q7K7YduKeKVWL7N111unR2d6pZZarSk6kY/caeNxUDyxOvMWyzoU2eg==
