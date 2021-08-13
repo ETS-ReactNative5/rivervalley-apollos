@@ -232,10 +232,10 @@
     passkit-generator "1.5.9"
     qrcode "^1.3.3"
 
-"@apollosproject/data-connector-postgres@^2.29.4-canary.4":
-  version "2.29.4-canary.6"
-  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-postgres/-/data-connector-postgres-2.29.4-canary.6.tgz#72f38d76a9aa4e2ab2060369a405a9e87bf511f8"
-  integrity sha512-ojDUsHyxdN43gXziGYxSWJIbxdG+WAFi6KjUMd2g3LrgVL0SGBvybjq5REytpR89kVMR4Y+CyS4d5pNKwv1MDQ==
+"@apollosproject/data-connector-postgres@^2.29.4-canary.7":
+  version "2.29.4-canary.7"
+  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-postgres/-/data-connector-postgres-2.29.4-canary.7.tgz#4fde65fac33d5c75a79037d0574b1b12ae8e1853"
+  integrity sha512-YXsNh4Lz1fsGG7hH/7kBbQJqTg4fm5Lq7ouWj5bOfEE2gDYmjhyjob5BJAukK57zrBCGG74GwLtuscNDNaQVcg==
   dependencies:
     "@apollosproject/data-schema" "^2.29.3"
     "@apollosproject/server-core" "^2.29.3"
