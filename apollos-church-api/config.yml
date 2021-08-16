@@ -66,41 +66,15 @@ CLOUDINARY:
 DATABASE:
   URL: ${DATABASE_URL}
 
-# This key holds various properties that allow our GraphQL server to map to your Rock Instance
-ROCK_MAPPINGS:
-  CAMPAIGN_CHANNEL_IDS: []
-  CONTENT_ITEM:
-    ContentSeriesContentItem:
-      # When resolving "ContentSeriesContentItem" look in rock for a "ContentChannelItem"
-      EntityType: ContentChannelItem
-      # Used to define the subset of content channels types that use this specific type.
-      ContentChannelTypeId: [6]
-    DevotionalContentItem:
-      EntityType: ContentChannelItem
-      ContentChannelId: [32, 37]
-    MediaContentItem:
-      ContentChannelId: [36]
-      EntityType: ContentChannelItem
-    UniversalContentItem:
-      EntityType: ContentChannelItem
-    WeekendContentItem:
-      ContentChannelId: [5]
-      EntityType: ContentChannelItem
-    ContentItem:
-      EntityType: ContentChannelItem
-
-  DATAVIEW_CATEGORIES:
-    # Id of the category used to store all persona dataviews
-    PersonaId: 210
-
-  ALL_CONTENT_CHANNELS:
-    - 32
-    - 33
-    - 34
-    - 35
-    - 36
-
-  SERMON_CHANNEL_ID: 36
+CONTENT:
+  SERMON_CHANNEL_ID: 8aa1c855-82dc-44a1-bf22-8dd47aff9156
+  TYPES:
+    - ContentSeriesContentItem
+    - DevotionalContentItem
+    - MediaContentItem
+    - UniversalContentItem
+    - WeekendContentItem
+    - ContentItem
 
 TABS:
   HOME:
@@ -114,7 +88,7 @@ TABS:
           arguments:
             limit: 1
             channelIds:
-              - 32
+              - 299478a2-2bb9-4a8c-8158-49aa6399d28f
       type: VerticalCardList
     - subtitle: Next up in DiscipleU
       algorithms:
@@ -122,7 +96,7 @@ TABS:
           arguments:
             limit: 6
             channelIds:
-              - 33
+              - 2533d86c-1e3b-4892-b8f5-7ec74c7bac79
       type: HorizontalCardList
 
   READ:
@@ -130,7 +104,7 @@ TABS:
       - type: CONTENT_FEED
         arguments:
           channelIds:
-            - 31
+            - e45fda8b-0498-4cd4-a8ea-047080585afb
           limit: 3
       type: VerticalCardList
     - subtitle: Read the Bible
@@ -139,14 +113,14 @@ TABS:
         - type: CONTENT_FEED
           arguments:
             channelIds:
-              - 32
+              - 299478a2-2bb9-4a8c-8158-49aa6399d28f
     - subtitle: Go Kids SOAP
       type: HorizontalCardList
       algorithms:
         - type: CONTENT_FEED
           arguments:
             channelIds:
-              - 37
+              - 01d44686-53b0-4921-a0b2-b034d1cf05e1
 
   WATCH:
     - subtitle: Latest Messages
@@ -155,7 +129,7 @@ TABS:
         arguments:
           limit: 5
           channelIds:
-            - 36
+            - 8aa1c855-82dc-44a1-bf22-8dd47aff9156
       type: HeroList
       primaryAction:
         # Right now, you hardcode exactly what GraphQL should return.
@@ -164,19 +138,19 @@ TABS:
         title: 'All messages'
         relatedNode:
           __typename: ContentChannel
-          id: 36
+          id: 8aa1c855-82dc-44a1-bf22-8dd47aff9156
     - algorithms:
       - type: CONTENT_FEED
         arguments:
           channelIds:
-            - 35
+            - e9db0f24-e01a-4241-bd81-3450325d7284
       type: HorizontalCardList
       subtitle: All Message Series
     - algorithms:
       - type: CONTENT_FEED
         arguments:
           channelIds:
-            - 33
+            - 2533d86c-1e3b-4892-b8f5-7ec74c7bac79
       type: HorizontalCardList
       subtitle: All DiscipleU Series
 

@@ -37,6 +37,8 @@ import {
   UserFlag,
   UserLike,
   Follow,
+  Notification,
+  NotificationPreference,
   Campus as PostgresCampus,
   Person as PostgresPerson,
   Media as PostgresMedia,
@@ -47,7 +49,6 @@ import {
   ContentItemCategory as ContentChannel,
 } from '@apollosproject/data-connector-postgres';
 
-import * as HopeStream from './HopeStream';
 import * as Theme from './theme';
 import * as ActionAlgorithm from './ActionAlgorithms';
 
@@ -83,6 +84,8 @@ const data = {
   RockConstants,
   Sharable,
   Analytics,
+  Notification,
+  NotificationPreference,
   OneSignal,
   PersonalDevice,
   Pass,
@@ -102,7 +105,6 @@ const data = {
   PostgresCampus,
   Persona,
   Person, // An extension of Postgres person. Will be eliminated in the near future so you can use just postgres/Person.
-  HopeStream,
 };
 
 const {
