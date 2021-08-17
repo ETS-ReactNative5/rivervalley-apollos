@@ -43,6 +43,7 @@ SUGGESTED_FOLLOWS:
   -
     id: 01ec6531-41fd-4fdf-b5c8-ad4acd870937 # Rachel Parsons
   - gabi.orourke@rivervalley.org
+  - r.ketterling@rivervalley.org
 ALGOLIA:
   APPLICATION_ID: ${ALGOLIASEARCH_APPLICATION_ID}
   API_KEY: ${ALGOLIASEARCH_API_KEY}
