@@ -1,6 +1,6 @@
 {
   "name": "RiverValley",
-  "version": "6.0.3",
+  "version": "6.0.2",
   "private": true,
   "engines": {
     "node": ">=12.x.x"
@@ -18,7 +18,8 @@
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js",
     "postinstall": "jetify && yarn pods",
-    "postversion": "react-native-version",
+    "bump": "yarn version --patch",
+    "postversion": "react-native-version --amend --never-increment-build",
     "pods": "(bundle install && cd ios && bundle exec pod install --repo-update)",
     "start": "yarn start:dev",
     "start:dev": "yarn generate-stories && node ./scripts/get-introspection-data.js && react-native start",
