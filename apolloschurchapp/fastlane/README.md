@@ -21,6 +21,11 @@ or alternatively using `brew install fastlane`
 fastlane ios deploy
 ```
 Push a new internal build to TestFlight
+### ios production
+```
+fastlane ios production
+```
+Promote the most recent version to production
 
 ----
 
