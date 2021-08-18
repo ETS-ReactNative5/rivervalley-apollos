@@ -1,0 +1,12 @@
+Welcome to the official River Valley Church app. 
+
+Our app lets you stream sermons from Pastor Rob Ketterling, access SOAP devotions, and find out what's going on with River Valley Church in Minnesota. 
+
+River Valley Church exists to lead people to an authentic, life-changing relationship with Jesus Christ. For more information, please visit http://www.rivervalley.org
+
+If you enjoy using the app, be sure to share with your friends and family. 
+
+The River Valley Church App was created with the Subsplash App Platform.
+
+Copyright:
+App: © 2020 Subsplash, Content: © 2020 River Valley Church
