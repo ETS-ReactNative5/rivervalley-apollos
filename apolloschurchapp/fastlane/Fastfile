@@ -65,9 +65,11 @@ platform :ios do
       skip_metadata: true,
       submit_for_review: true,
       automatic_release: true,
-      add_id_info_uses_idfa: false,
+      submission_information: {
+        add_id_info_uses_idfa: false
+      },
       reject_if_possible: true,
-      run_precheck_before_submit: true
+      run_precheck_before_submit: false
     )
   end
 end
