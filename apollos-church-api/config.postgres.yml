@@ -43,7 +43,8 @@ SUGGESTED_FOLLOWS:
   -
     id: 01ec6531-41fd-4fdf-b5c8-ad4acd870937 # Rachel Parsons
   - gabi.orourke@rivervalley.org
-  - r.ketterling@rivervalley.org
+  -
+    id: 723f9c21-e40f-4cb1-b4df-200da4963d0e # pastor rob ketterling
 ALGOLIA:
   APPLICATION_ID: ${ALGOLIASEARCH_APPLICATION_ID}
   API_KEY: ${ALGOLIASEARCH_API_KEY}
