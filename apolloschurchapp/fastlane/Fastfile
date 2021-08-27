@@ -62,7 +62,6 @@ platform :ios do
     deliver(
       skip_binary_upload: true,
       skip_screenshots: true,
-      skip_metadata: true,
       submit_for_review: true,
       automatic_release: true,
       submission_information: {
