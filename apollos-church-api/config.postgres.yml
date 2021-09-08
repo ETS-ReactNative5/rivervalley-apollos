@@ -117,6 +117,7 @@ TABS:
             - e45fda8b-0498-4cd4-a8ea-047080585afb
           limit: 6
       type: HorizontalCardList
+      subtitle: Read
     - subtitle: Read the Bible
       type: HorizontalCardList
       algorithms:
