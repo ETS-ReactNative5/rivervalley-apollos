@@ -118,7 +118,7 @@ TABS:
           limit: 6
       type: HorizontalCardList
       subtitle: Read
-    - subtitle: Read the Bible
+    - subtitle: Daily SOAP
       type: HorizontalCardList
       algorithms:
         - type: CONTENT_FEED
