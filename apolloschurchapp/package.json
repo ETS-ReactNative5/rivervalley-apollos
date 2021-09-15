@@ -57,7 +57,7 @@
     "@apollosproject/ui-kit": "^2.29.3",
     "@apollosproject/ui-mapview": "^2.29.3",
     "@apollosproject/ui-media-player": "^2.30.1-canary.4",
-    "@apollosproject/ui-notifications": "^2.29.3",
+    "@apollosproject/ui-notifications": "^2.33.1-canary.0",
     "@apollosproject/ui-onboarding": "^2.29.3",
     "@apollosproject/ui-passes": "^2.29.3",
     "@apollosproject/ui-prayer": "^2.29.4-canary.18",
