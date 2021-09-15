@@ -22,7 +22,7 @@ import {
   PersonalDevice,
   Template,
   AuthSms,
-  Campus,
+  // Campus,
   Group,
   BinaryFiles,
   FeatureFeed,
@@ -30,6 +30,7 @@ import {
   PrayerRequest,
   Persona,
   Person as RockPerson,
+  Campus as RockCampus,
 } from '@apollosproject/data-connector-rock';
 
 import {
@@ -39,7 +40,7 @@ import {
   Follow,
   Notification,
   NotificationPreference,
-  Campus as PostgresCampus,
+  Campus,
   Person as PostgresPerson,
   Media as PostgresMedia,
   Feature,
@@ -91,7 +92,6 @@ const data = {
   Pass,
   Search,
   Template,
-  Campus,
   Group,
   FeatureFeed,
   ActionAlgorithm,
@@ -102,7 +102,8 @@ const data = {
   UserLike,
   UserFlag,
   Follow,
-  PostgresCampus,
+  RockCampus: { dataSource: RockCampus.dataSource },
+  Campus,
   Persona,
   Person, // An extension of Postgres person. Will be eliminated in the near future so you can use just postgres/Person.
 };
