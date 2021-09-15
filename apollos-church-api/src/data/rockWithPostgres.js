@@ -43,19 +43,11 @@ const personResolver = {
       // return dataSources.Person.uploadProfileImage(file, size); // updates in Postgres. Performs the upload again.
     },
     updateUserCampus: async (root, { campusId }, { dataSources }) => {
-      await dataSources.Campus.updateCurrentUserCampus({ campusId }); // updates in Rock
-
-      const { id: rockCampusId } = parseGlobalId(campusId);
-      const campus = await dataSources.PostgresCampus.getFromId(
-        rockCampusId,
-        null,
-        {
-          originType: 'rock',
-        }
-      ); // finds the postgres campus id
-      return dataSources.Person.updateProfile([
-        { field: 'campusId', value: campus.id },
-      ]); // updates in Postgres
+      const campus = await dataSources.Campus.getFromId(campusId); // finds the postgres campus id
+      await dataSources.Person.updateProfile([
+        { field: 'campusId', value: campus.originId },
+      ]); // updates in Rock
+      return dataSources.Campus.updateCurrentUserCampus({ campusId }); // updates in Rock
     },
     updateUserPushSettings: async (root, { input }, { dataSources }) => {
       // register the changes w/ postgres
@@ -89,6 +81,12 @@ const personResolver = {
 
       // return the original return value (which is currentPerson)
       return returnValue;
+    },
+  },
+  Campus: {
+    image: async (root) => {
+      const image = await root.getImage();
+      return image?.url && { uri: image.url };
     },
   },
 };
