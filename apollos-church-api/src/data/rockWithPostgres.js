@@ -1,7 +1,11 @@
 /* eslint-disable import/prefer-default-export, max-classes-per-file */
 import { parseGlobalId } from '@apollosproject/server-core';
-import { Person as postgresPerson } from '@apollosproject/data-connector-postgres';
+import {
+  Person as postgresPerson,
+  Interactions as postgresInteraction,
+} from '@apollosproject/data-connector-postgres';
 import * as OneSignalOriginal from '@apollosproject/data-connector-onesignal';
+import ApollosConfig from '@apollosproject/config';
 
 class personDataSource extends postgresPerson.dataSource {
   async create(attributes) {
@@ -157,4 +161,88 @@ export const PostgresDefaultCampusOverride = {
       },
     },
   },
+};
+
+const UUID_V4_REGEXP = new RegExp(
+  /^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i
+);
+const isUuid = (uuid) => UUID_V4_REGEXP.test(uuid); // Define model is used to define the base attributes of a model
+
+class InteractionDataSource extends postgresInteraction.dataSource {
+  async createNodeInteraction({
+    nodeId,
+    action,
+    additional = true,
+    awaitAdditional = false,
+  }) {
+    const { id, __type } = parseGlobalId(nodeId);
+
+    const currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
+
+    let entityType = __type;
+    if (ApollosConfig?.CONTENT?.TYPES?.includes(__type)) {
+      entityType = 'ContentItem';
+    }
+
+    if (isUuid(id)) {
+      await this.model.create({
+        personId: currentPersonId,
+        nodeType: entityType,
+        nodeId: id,
+        action,
+      });
+    } else {
+      await this.model.create({
+        personId: currentPersonId,
+        nodeType: entityType,
+        arguments: { id },
+        action,
+      });
+    }
+
+    if (additional) {
+      const additionalFuncs = this.createAdditionalInteractions({
+        id,
+        __type,
+        action,
+      });
+
+      // Primarily used in testing.
+      // Most of the time, we don't want to wait for this code to return.
+      if (awaitAdditional) {
+        await additionalFuncs;
+      }
+    }
+
+    return {
+      success: true,
+      nodeId,
+    };
+  }
+}
+
+export const Interactions = {
+  ...postgresInteraction,
+  resolver: {
+    ...postgresInteraction.resolver,
+    PrayerRequest: {
+      isPrayed: async ({ id }, args, { dataSources }, { parentType }) => {
+        let currentPersonId;
+        try {
+          currentPersonId = await dataSources.Person.getCurrentPersonId();
+        } catch (e) {
+          return false;
+        }
+        const interactions = await dataSources.Interactions.model.findAll({
+          where: {
+            action: 'PRAY',
+            'arguments.id': id,
+            personId: currentPersonId,
+          },
+        });
+        return interactions.length;
+      },
+    },
+  },
+  dataSource: InteractionDataSource,
 };

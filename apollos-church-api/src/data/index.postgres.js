@@ -40,7 +40,7 @@ import {
   UserFlag,
   UserLike,
   Follow,
-  Interactions,
+  // Interactions,
   Likes,
   Notification,
   NotificationPreference,
@@ -66,6 +66,7 @@ import {
   OneSignal,
   PostgresDefaultCampusOverride,
   RockDefaultCampusOverride,
+  Interactions,
 } from './rockWithPostgres';
 
 const postgresContentModules = {
@@ -101,13 +102,13 @@ const rockContentModules = {
 const data = {
   Interfaces,
   FeatureFeed,
+  PrayerRequest,
   RockPerson, // This entry needs to come before (postgres) Person
   BinaryFiles, // This entry needs to come before (postgres) Person
   PostgresPerson, // Postgres person for now, as we extend this dataSource in the 'rockWithPostgres' file
   ...(process.env.DATABASE_CONTENT
     ? postgresContentModules
     : rockContentModules),
-  PrayerRequest,
   Cloudinary,
   Auth,
   AuthSms,
