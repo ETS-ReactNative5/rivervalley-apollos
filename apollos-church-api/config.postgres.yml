@@ -84,6 +84,14 @@ TABS:
       isCard: false
       type: PrayerList
       subtitle: Daily Prayer
+    - subtitle: This Week
+      algorithms:
+        - type: CONTENT_FEED
+          arguments:
+            limit: 6
+            channelIds:
+              - 63de3871-d80f-4b55-bf4e-eca67f454238
+      type: VerticalCardList
     - subtitle: Daily Scripture
       algorithms:
         - type: CONTENT_FEED
@@ -91,14 +99,6 @@ TABS:
             limit: 1
             channelIds:
               - 299478a2-2bb9-4a8c-8158-49aa6399d28f
-      type: VerticalCardList
-    - subtitle: Coming Up
-      algorithms:
-        - type: CONTENT_FEED
-          arguments:
-            limit: 6
-            channelIds:
-              - 63de3871-d80f-4b55-bf4e-eca67f454238
       type: VerticalCardList
     - subtitle: Next up in DiscipleU
       algorithms:
