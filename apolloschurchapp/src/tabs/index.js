@@ -65,6 +65,9 @@ const HomeTab = createFeatureFeedTab({
 });
 
 const ExploreTab = createFeatureFeedTab({
+  screenOptions: {
+    headerRight: HeaderRight,
+  },
   tabName: 'Explore',
   feedName: 'READ',
 });

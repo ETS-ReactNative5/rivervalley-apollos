@@ -48,7 +48,7 @@ const ActionTable = () => (
             onPress={() => openUrl('https://www.rivervalley.org/next/')}
           >
             <Cell>
-              <CellText>Sign up for Next class</CellText>
+              <CellText>Sign up for Welcome Home</CellText>
               <CellIcon name="arrow-next" />
             </Cell>
           </Touchable>
