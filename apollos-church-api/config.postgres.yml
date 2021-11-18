@@ -110,14 +110,6 @@ TABS:
       type: HorizontalCardList
 
   READ:
-    - algorithms:
-      - type: CONTENT_FEED
-        arguments:
-          channelIds:
-            - e45fda8b-0498-4cd4-a8ea-047080585afb
-          limit: 6
-      type: HorizontalCardList
-      subtitle: Read
     - subtitle: Daily SOAP
       type: HorizontalCardList
       algorithms:
@@ -132,6 +124,14 @@ TABS:
           arguments:
             channelIds:
               - 01d44686-53b0-4921-a0b2-b034d1cf05e1
+    - algorithms:
+      - type: CONTENT_FEED
+        arguments:
+          channelIds:
+            - e45fda8b-0498-4cd4-a8ea-047080585afb
+          limit: 6
+      type: HorizontalCardList
+      subtitle: Keep Reading
 
   WATCH:
     - subtitle: Latest Messages
