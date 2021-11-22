@@ -84,7 +84,7 @@ TABS:
       isCard: false
       type: PrayerList
       subtitle: Daily Prayer
-    - subtitle: This Week
+    - subtitle: Coming Up
       algorithms:
         - type: CONTENT_FEED
           arguments:
