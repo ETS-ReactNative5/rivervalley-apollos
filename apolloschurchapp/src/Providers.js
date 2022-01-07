@@ -1,4 +1,5 @@
 import querystring from 'querystring';
+import PropTypes from 'prop-types';
 import React from 'react';
 import { useColorScheme } from 'react-native';
 import ApollosConfig from '@apollosproject/config';
@@ -29,7 +30,9 @@ const trackOneSignal = ({ eventName, properties }) => {
     'View Content',
     'Comment Added',
   ];
-  if (!acceptedEvents.includes(eventName)) return;
+  if (!acceptedEvents.includes(eventName)) {
+    return;
+  }
 
   const tags = {};
   const timestamp = Math.floor(Date.now() / 1000);
@@ -52,19 +55,17 @@ const AppProviders = (props) => {
         // TODO deprecated prop
         navigate={NavigationService.navigate}
         handleExternalLink={(url) => {
-          const path = url.includes('app-link/')
-            ? url.split('app-link/')[1]
-            : url.split('//')[1];
-
+          const path = url.split('app-link/')[1];
           const [route, location] = path.split('/');
-          if (route === 'content')
+          if (route === 'content') {
             NavigationService.navigate('ContentSingle', { itemId: location });
+          }
           if (route === 'nav') {
-            const [cleanPath, query] = location.split('?');
-            const args = querystring.parse(query);
+            const [component, params] = location.split('?');
+            const args = querystring.parse(params);
             NavigationService.navigate(
               // turns "home" into "Home"
-              cleanPath[0].toUpperCase() + cleanPath.substring(1),
+              component[0].toUpperCase() + component.substring(1),
               args
             );
           }
@@ -116,6 +117,10 @@ const AppProviders = (props) => {
       </NotificationsProvider>
     </ClientProvider>
   );
+};
+
+AppProviders.propTypes = {
+  children: PropTypes.shape({}),
 };
 
 export default AppProviders;
