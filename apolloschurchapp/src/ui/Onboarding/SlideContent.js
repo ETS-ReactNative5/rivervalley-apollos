@@ -1,4 +1,3 @@
-import React from 'react';
 import { View } from 'react-native';
 import {
   styled,
@@ -66,7 +65,7 @@ const SlideContent = withIsLoading(
   ({ icon, title, description, children, isLoading, ...props }) => {
     if (!icon && !title && !description && !children) {
       console.warn(
-        `Warning: You need to pass at least one prop for SlideContent to render something cowboy.`
+        'Warning: You need to pass at least one prop for SlideContent to render something cowboy.'
       );
     }
 
