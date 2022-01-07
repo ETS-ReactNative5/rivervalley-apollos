@@ -23,8 +23,6 @@ buildscript {
 
 allprojects {
     repositories {
-        // bug in react-native-video, needs jcenter
-        // https://github.com/react-native-video/react-native-video/issues/2468
         mavenCentral()
         mavenLocal()
         maven {
@@ -38,10 +36,8 @@ allprojects {
 
         google()
         maven { url 'https://www.jitpack.io' }
-        jcenter() {
-            content {
-                includeModule("com.yqritc", "android-scalablevideoview")
-            }
-        }
+        // bug in react-native-video, needs jcenter
+        // https://github.com/react-native-video/react-native-video/issues/2468
+        jcenter()
     }
 }
