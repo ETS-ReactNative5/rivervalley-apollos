@@ -16,6 +16,11 @@ or alternatively using `brew install fastlane`
 
 # Available Actions
 ## iOS
+### ios certs
+```
+fastlane ios certs
+```
+Generate new provisioning profiles and certificates for app and push notifications
 ### ios deploy
 ```
 fastlane ios deploy
