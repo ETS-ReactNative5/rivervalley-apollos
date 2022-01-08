@@ -63,8 +63,8 @@ platform :ios do
     app_store_connect_api_key(key_filepath: "ios/apollos.p8", in_house: false)
     deliver(
       skip_binary_upload: true,
-      skip_screenshots: false,
-      skip_metadata: false,
+      skip_screenshots: true,
+      skip_metadata: true,
       submit_for_review: true,
       automatic_release: true,
       submission_information: {
