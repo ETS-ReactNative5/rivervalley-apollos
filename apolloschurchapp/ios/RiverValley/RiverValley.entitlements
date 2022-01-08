@@ -9,6 +9,8 @@
 		<string>applinks:rivervalley.herokuapp.com</string>
 	</array>
 	<key>com.apple.security.application-groups</key>
-	<array/>
+	<array>
+		<string>group.com.subsplashconsulting.8DDN2T</string>
+	</array>
 </dict>
 </plist>
