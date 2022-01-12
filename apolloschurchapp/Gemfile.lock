@@ -275,10 +275,11 @@ GEM
 
 PLATFORMS
   x86_64-darwin-19
+  x86_64-darwin-20
 
 DEPENDENCIES
   cocoapods (= 1.11.2)
   fastlane (= 2.199.0)
 
 BUNDLED WITH
-   2.2.29
+   2.3.4
