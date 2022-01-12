@@ -62,7 +62,7 @@ jobs:
     - name: Install Dependencies
       run: yarn config set network-timeout 300000 && yarn
 
-    - run: cat Gemfile.lock
+    - run: git diff
 
     - name: Generate Fragment Types
       run: node ./scripts/get-introspection-data.js
