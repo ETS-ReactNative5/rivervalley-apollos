@@ -46,6 +46,7 @@ def apollos_console(platform, status)
       "update": {
           "$set": {
               platform => status,
+              "version": number_of_commits
           }
       }}.to_json
 
