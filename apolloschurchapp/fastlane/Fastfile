@@ -28,6 +28,32 @@ before_all do
   git_pull
 end
 
+def apollos_console(platform, status)
+  require 'json'
+  require 'net/http'
+
+  uri = URI('https://data.mongodb-api.com/app/data-ugktb/endpoint/data/beta/action/updateOne')
+  req = Net::HTTP::Post.new(uri)
+  req['Content-Type'] = 'application/json'
+  req['Access-Control-Request-Headers'] = '*'
+  req['api-key'] = ENV["APOLLOS_CONSOLE_MONGO_API_KEY"]
+
+  req.body = {
+      "dataSource": "Cluster0",
+      "database": "apollos",
+      "collection": "deployments",
+      "filter": { "church": "River Valley" },
+      "update": {
+          "$set": {
+              platform => status,
+          }
+      }}.to_json
+
+  Net::HTTP.start(uri.hostname, uri.port, :use_ssl => uri.scheme == 'https') do |http|
+    http.request(req)
+  end
+end
+
 
 platform :ios do
 
@@ -55,10 +81,11 @@ platform :ios do
     increment_build_number(build_number: number_of_commits, xcodeproj: "ios/" << proj << ".xcodeproj")
     build_app(workspace: "ios/" << proj << ".xcworkspace", scheme: proj)
     changelog_from_git_commits
-    upload_app_privacy_details_to_app_store(
-      app_identifier: ENV["DELIVER_APP_IDENTIFIER"]
-    )
+    #upload_app_privacy_details_to_app_store(
+      #app_identifier: ENV["DELIVER_APP_IDENTIFIER"]
+    #)
     testflight
+    apollos_console("ios", true)
   end
 
   desc "Promote the most recent Testflight version to production"
@@ -76,6 +103,13 @@ platform :ios do
       reject_if_possible: true,
       run_precheck_before_submit: false
     )
+  end
+
+  error do |lane, exception|
+    apollos_console("ios", false)
+    #s = File.read("../app.json")
+    #app_name = s[/"name": "(.*)",/, 1]
+    #slack(message: app_name << " - " << exception.to_s, success: false)
   end
 end
 
@@ -97,11 +131,13 @@ platform :android do
       json_key: "android/key.json",
       package_name: package_name
     )
+    apollos_console("android", true)
+  end
+
+  error do |lane, exception|
+    apollos_console("android", false)
+    #s = File.read("../app.json")
+    #app_name = s[/"name": "(.*)",/, 1]
+    #slack(message: app_name << " - " << exception.to_s, success: false)
   end
 end
-
-#error do |lane, exception|
-  #s = File.read("../app.json")
-  #app_name = s[/"name": "(.*)",/, 1]
-  #slack(message: app_name << " - " << exception.to_s, success: false)
-#end
