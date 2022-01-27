@@ -9,7 +9,7 @@ class dataSource extends ContentItem.dataSource {
     const features = await super.getFeatures(item);
 
     // This moves the Webview feature above the journal entries
-    if (features[features.length - 1].dataValues.type === 'Webview') {
+    if (features[features.length - 1]?.dataValues?.type === 'Webview') {
       const tempFeature = features[features.length - 1];
 
       features[features.length - 1] = features[features.length - 3];
