@@ -53,7 +53,7 @@
     "@apollosproject/ui-notifications": "^2.41.0",
     "@apollosproject/ui-onboarding": "^2.41.0",
     "@apollosproject/ui-passes": "^2.41.0",
-    "@apollosproject/ui-prayer": "^2.41.0",
+    "@apollosproject/ui-prayer": "^2.44.1",
     "@apollosproject/ui-scripture": "^2.41.0",
     "@apollosproject/ui-test-utils": "^2.41.0",
     "@bugsnag/react-native": "^7.9.6",
