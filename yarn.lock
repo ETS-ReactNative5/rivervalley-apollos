@@ -398,10 +398,10 @@
   dependencies:
     "@apollo/client" "3.3.20"
 
-"@apollosproject/ui-prayer@^2.41.0":
-  version "2.41.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-prayer/-/ui-prayer-2.41.0.tgz#178545492191fa829d5cf142bbb90129390bedfa"
-  integrity sha512-2dgC0Q5NxFDQxkrbLZk8ayWIoJtfs3CxQUx21MwA038MWEWHxTawjrf5fdcjzTCQnlqLOvLQUjKVvCPhyD/Zwg==
+"@apollosproject/ui-prayer@^2.44.1":
+  version "2.44.1"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-prayer/-/ui-prayer-2.44.1.tgz#c9b74938f8d818d33fa71ae4a136d7eaf08b7ab8"
+  integrity sha512-Mm/mfa9l+oavKmVF8J2k9cvf/lBxtKF275SmAR/TDGxEQF08G7ZGEZmKBoj1s7FYyNzaopIpJRHgvhVmrVwCRQ==
   dependencies:
     formik "1.5.1"
     lodash "4.17.21"
