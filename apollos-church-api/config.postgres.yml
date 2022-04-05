@@ -100,6 +100,14 @@ TABS:
             channelIds:
               - 26cdba79-2f20-43d6-b0b2-3ba69557afaf
             limit: 1
+    - subtitle: Holy Week Devotional
+      type: VerticalCardList
+      algorithms:
+        - type: CONTENT_FEED
+          arguments:
+            channelIds:
+              - 50eb23db-694d-4199-ad05-bfc8516cff84
+            limit: 1
     - subtitle: Daily Scripture
       algorithms:
         - type: CONTENT_FEED
