@@ -126,6 +126,13 @@ TABS:
       type: HorizontalCardList
 
   READ:
+    - subtitle: Ages Album Devotional
+      type: HorizontalCardList
+      algorithms:
+        - type: CONTENT_FEED
+          arguments:
+            channelIds:
+              - 99b4d840-b224-48af-8922-07aa03514f8d
     - subtitle: 21 Days
       type: HorizontalCardList
       algorithms:
